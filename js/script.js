@@ -1,0 +1,6 @@
+let fotosAnlässe=["birth-5407332_1280.jpg","bridal-bouquet-2720592_1280.jpg","crowd-2140590_1280.jpg","german-3504961_1280.jpg","presents-6904620_1280.jpg","sparkling-wine-1803122_1280.jpg","sparkling-wine-2407247_1280.jpg"];
+let fotosFamilie_Freunde=["baby-7648901_1280.jpg","children-4894710_1280.jpg","family-6398107_1280.jpg","family-6802482_1280.jpg","friendship-day-3104635_1280.jpg","mum-7344070_1280.jpg","siblings-7103506_1280.jpg"];
+let fotosNatur=["Frühling_2025_1.jpg","Frühling_2025_2.jpg","Frühling_2025_3.jpg","Sommer1.jpg","Sommer2.jpg","Sommer3.jpg","Sommer5.jpg","Sommer6.jpg","Sommer7.jpg","Sommer8.jpg","Winter_2024_1.jpg","Winter_2024_2.jpg","Winter_2024_5.jpg"];
+let fotosSchwarz_Weiß=["black-white-2474682_1280.jpg","cat-5400886_1280.jpg","easter-cat-4810499_1280.jpg","monochrom-8608410_1280.jpg","schwarz-5346585_1280.jpg","strom-1017632_1280.jpg"];
+let fotosStadt_Straße=["bremen-town-musicians-230849_1280.jpg","castle-5116436_1280.jpg","heidelberg-4603040_1280.jpg","moon-3572287_1280.jpg","moritzburg-84299_1280.jpg","park-317061_1280.jpg","town-hall-2408071_1280.jpg","Winter_2024_3.jpg","Winter_2024_4.jpg","Winter_2024_6.jpg"];
+let fotosTiere=["animal-9650392_1280.jpg","cat-9734651_1280.jpg","falcon-9697872_1280.jpg","Frühling_2025_4.jpg","lemon-pancy-9727489_1280.jpg","Sommer4.jpg"];
