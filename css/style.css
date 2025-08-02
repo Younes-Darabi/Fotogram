@@ -149,6 +149,7 @@ li:hover::before {
 
 /* ----------------------------------main */
 .main_class {
+    position: relative;
     flex: 1;
     background-color: white;
     padding: 20px;
@@ -158,7 +159,6 @@ li:hover::before {
     overflow-y: auto;
     overflow-x: hidden;
     gap: 20px;
-    /* transition: all 5s ease-in-out; */
 }
 
 .main_img {
@@ -170,5 +170,56 @@ li:hover::before {
 }
 
 /* ---------------------------------- */
+.bild_click {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #000;
+}
+
+
+.hide {
+    display: none;
+}
+
 /* ---------------------------------- */
+ .dialog_img{
+    width: 90%;
+    height: 70vh;
+    object-position: center;
+    border-radius: 5px;
+ }
+.dialog{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.dialog_header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dialog_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.dialog_footer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
 /* ---------------------------------- */
