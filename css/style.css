@@ -44,6 +44,20 @@ h4 {
     text-align: center;
     color: #EA5A5A;
 }
+h5{
+    font-size: 16px;
+    font-weight:900;
+    margin: 0;
+    color: #1F435B;
+}
+
+button{
+    background-color: lightgrey;
+    color: rgb(124, 124, 124);
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: 1px solid #abb7be00;
+}
 
 .div_class {
 
@@ -167,6 +181,13 @@ li:hover::before {
     border-radius: 5px;
     object-fit: cover;
     margin: 10px;
+    transition: all 1ms ease-out;
+    border: 1px solid #28263365;
+
+}
+.main_img:hover{
+    border: 2px solid #EA5A5A;
+    cursor: pointer;
 }
 
 /* ---------------------------------- */
@@ -181,7 +202,7 @@ li:hover::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #000;
 }
 
@@ -195,7 +216,13 @@ li:hover::before {
     width: 90%;
     height: 70vh;
     object-position: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 3px solid #1f435b23;
+    transition: all 1s ease-in-out;
+
+ }
+ .dialog_img:hover{
+    border: 3px solid #EA5A5A;;;
  }
 .dialog{
     display: flex;
@@ -208,6 +235,7 @@ li:hover::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 .dialog_main{
     display: flex;
@@ -221,5 +249,23 @@ li:hover::before {
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
+}
+.dialog_icon{
+    width: 20px;
+    filter: invert(20%) sepia(25%) saturate(1300%) hue-rotate(170deg) brightness(90%) contrast(90%);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.icon_close{
+    width: 17px;
+    filter: invert(20%) sepia(25%) saturate(1300%) hue-rotate(170deg) brightness(90%) contrast(90%);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.icon_close:hover{
+    filter: invert(39%) sepia(66%) saturate(658%) hue-rotate(322deg) brightness(101%) contrast(95%);
+}
+.dialog_icon:hover{
+    filter: invert(39%) sepia(66%) saturate(658%) hue-rotate(322deg) brightness(101%) contrast(95%);
 }
 /* ---------------------------------- */

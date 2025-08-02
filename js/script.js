@@ -1,63 +1,63 @@
 let fotosAnlaesse = [
-  { src: "birth-5407332_1280.jpg", alt: "birth" },
-  { src: "bridal-bouquet-2720592_1280.jpg", alt: "bridal" },
-  { src: "crowd-2140590_1280.jpg", alt: "crowd" },
-  { src: "german-3504961_1280.jpg", alt: "german" },
-  { src: "presents-6904620_1280.jpg", alt: "presents" },
-  { src: "sparkling-wine-1803122_1280.jpg", alt: "sparkling" },
-  { src: "sparkling-wine-2407247_1280.jpg", alt: "sparkling" }
+  { src: "/img/fotos/Anlaesse/birth-5407332_1280.jpg", alt: "birth" },
+  { src: "/img/fotos/Anlaesse/bridal-bouquet-2720592_1280.jpg", alt: "bridal" },
+  { src: "/img/fotos/Anlaesse/crowd-2140590_1280.jpg", alt: "crowd" },
+  { src: "/img/fotos/Anlaesse/german-3504961_1280.jpg", alt: "Germany" },
+  { src: "/img/fotos/Anlaesse/presents-6904620_1280.jpg", alt: "presents" },
+  { src: "/img/fotos/Anlaesse/sparkling-wine-1803122_1280.jpg", alt: "sparkling" },
+  { src: "/img/fotos/Anlaesse/sparkling-wine-2407247_1280.jpg", alt: "sparkling" }
 ];
 let fotosFamilie_Freunde = [
-  { src: "baby-7648901_1280.jpg", alt: "baby"},
-  { src: "children-4894710_1280.jpg", alt: "children"},
-  { src: "family-6398107_1280.jpg", alt: "family"},
-  { src: "family-6802482_1280.jpg", alt: "family"},
-  { src: "friendship-day-3104635_1280.jpg", alt: "friendship"},
-  { src: "mum-7344070_1280.jpg", alt: "mum"},
-  { src: "siblings-7103506_1280.jpg", alt: "siblings"}
+  { src: "/img/fotos/Familie_Freunde/baby-7648901_1280.jpg", alt: "baby"},
+  { src: "/img/fotos/Familie_Freunde/children-4894710_1280.jpg", alt: "children"},
+  { src: "/img/fotos/Familie_Freunde/family-6398107_1280.jpg", alt: "family"},
+  { src: "/img/fotos/Familie_Freunde/family-6802482_1280.jpg", alt: "family"},
+  { src: "/img/fotos/Familie_Freunde/friendship-day-3104635_1280.jpg", alt: "friendship"},
+  { src: "/img/fotos/Familie_Freunde/mum-7344070_1280.jpg", alt: "mum"},
+  { src: "/img/fotos/Familie_Freunde/siblings-7103506_1280.jpg", alt: "siblings"}
 ];
 let fotosNatur = [
-  { src: "Frühling_2025_1.jpg", alt: "Frühling 1" },
-  { src: "Frühling_2025_2.jpg", alt: "Frühling 2" },
-  { src: "Frühling_2025_3.jpg", alt: "Frühling 3" },
-  { src: "Sommer1.jpg", alt: "Sommer 1" },
-  { src: "Sommer2.jpg", alt: "Sommer 2" },
-  { src: "Sommer3.jpg", alt: "Sommer 3" },
-  { src: "Sommer5.jpg", alt: "Sommer 5" },
-  { src: "Sommer6.jpg", alt: "Sommer 6" },
-  { src: "Sommer7.jpg", alt: "Sommer 7" },
-  { src: "Sommer8.jpg", alt: "Sommer 8" },
-  { src: "Winter_2024_1.jpg", alt: "Winter 1" },
-  { src: "Winter_2024_2.jpg", alt: "Winter 2" },
-  { src: "Winter_2024_5.jpg", alt: "Winter 3" }
+  { src: "/img/fotos/Natur/Frühling_2025_1.jpg", alt: "Frühling 1" },
+  { src: "/img/fotos/Natur/Frühling_2025_2.jpg", alt: "Frühling 2" },
+  { src: "/img/fotos/Natur/Frühling_2025_3.jpg", alt: "Frühling 3" },
+  { src: "/img/fotos/Natur/Sommer1.jpg", alt: "Sommer 1" },
+  { src: "/img/fotos/Natur/Sommer2.jpg", alt: "Sommer 2" },
+  { src: "/img/fotos/Natur/Sommer3.jpg", alt: "Sommer 3" },
+  { src: "/img/fotos/Natur/Sommer5.jpg", alt: "Sommer 5" },
+  { src: "/img/fotos/Natur/Sommer6.jpg", alt: "Sommer 6" },
+  { src: "/img/fotos/Natur/Sommer7.jpg", alt: "Sommer 7" },
+  { src: "/img/fotos/Natur/Sommer8.jpg", alt: "Sommer 8" },
+  { src: "/img/fotos/Natur/Winter_2024_1.jpg", alt: "Winter 1" },
+  { src: "/img/fotos/Natur/Winter_2024_2.jpg", alt: "Winter 2" },
+  { src: "/img/fotos/Natur/Winter_2024_5.jpg", alt: "Winter 3" }
 ];
 let fotosSchwarzWeiss = [
-{src: "black-white-2474682_1280.jpg", alt: "black-white"},
-{src: "cat-5400886_1280.jpg", alt: "cat"},
-{src: "easter-cat-4810499_1280.jpg", alt: "easter"},
-{src: "monochrom-8608410_1280.jpg", alt: "monochrom"},
-{src: "schwarz-5346585_1280.jpg", alt: "schwarz"},
-{src: "strom-1017632_1280.jpg", alt: "strom"}
+{src: "/img/fotos/Schwarz_Weiss/black-white-2474682_1280.jpg", alt: "black-white"},
+{src: "/img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg", alt: "cat"},
+{src: "/img/fotos/Schwarz_Weiss/easter-cat-4810499_1280.jpg", alt: "easter"},
+{src: "/img/fotos/Schwarz_Weiss/monochrom-8608410_1280.jpg", alt: "monochrom"},
+{src: "/img/fotos/Schwarz_Weiss/schwarz-5346585_1280.jpg", alt: "schwarz"},
+{src: "/img/fotos/Schwarz_Weiss/strom-1017632_1280.jpg", alt: "strom"}
 ];
 let fotosStadt_Straße = [
-  { src: "bremen-town-musicians-230849_1280.jpg", alt: "bremen town musicians"},
-  { src: "castle-5116436_1280.jpg", alt: "castle"},
-  { src: "heidelberg-4603040_1280.jpg", alt: "heidelberg"},
-  { src: "moon-3572287_1280.jpg", alt: "moon"},
-  { src: "moritzburg-84299_1280.jpg", alt: "moritzburg"},
-  { src: "park-317061_1280.jpg", alt: "park"},
-  { src: "town-hall-2408071_1280.jpg", alt: "town"},
-  { src: "Winter_2024_3.jpg", alt: "Winter"},
-  { src: "Winter_2024_4.jpg", alt: "Winter"},
-  { src: "Winter_2024_6.jpg", alt: "Winter"}
+  { src: "/img/fotos/Stadt_Strasse/bremen-town-musicians-230849_1280.jpg", alt: "bremen town musicians"},
+  { src: "/img/fotos/Stadt_Strasse/castle-5116436_1280.jpg", alt: "castle"},
+  { src: "/img/fotos/Stadt_Strasse/heidelberg-4603040_1280.jpg", alt: "heidelberg"},
+  { src: "/img/fotos/Stadt_Strasse/moon-3572287_1280.jpg", alt: "moon"},
+  { src: "/img/fotos/Stadt_Strasse/moritzburg-84299_1280.jpg", alt: "moritzburg"},
+  { src: "/img/fotos/Stadt_Strasse/park-317061_1280.jpg", alt: "park"},
+  { src: "/img/fotos/Stadt_Strasse/town-hall-2408071_1280.jpg", alt: "town"},
+  { src: "/img/fotos/Stadt_Strasse/Winter_2024_3.jpg", alt: "Winter"},
+  { src: "/img/fotos/Stadt_Strasse/Winter_2024_4.jpg", alt: "Winter"},
+  { src: "/img/fotos/Stadt_Strasse/Winter_2024_6.jpg", alt: "Winter"}
 ];
 let fotosTiere = [
-  {src: "animal-9650392_1280.jpg", alt: "animal"},
-  {src: "cat-9734651_1280.jpg", alt: "cat"},
-  {src: "falcon-9697872_1280.jpg", alt: "falcon"},
-  {src: "Frühling_2025_4.jpg", alt: "Frühling"},
-  {src: "lemon-pancy-9727489_1280.jpg", alt: "lemon pancy"},
-  {src: "Sommer4.jpg", alt: "Sommer"}
+  {src: "/img/fotos/Tiere/animal-9650392_1280.jpg", alt: "animal"},
+  {src: "/img/fotos/Tiere/cat-9734651_1280.jpg", alt: "cat"},
+  {src: "/img/fotos/Tiere/falcon-9697872_1280.jpg", alt: "falcon"},
+  {src: "/img/fotos/Tiere/Frühling_2025_4.jpg", alt: "Frühling"},
+  {src: "/img/fotos/Tiere/lemon-pancy-9727489_1280.jpg", alt: "lemon pancy"},
+  {src: "/img/fotos/Tiere/Sommer4.jpg", alt: "Sommer"}
 ];
 
 Alle_Fotos();
@@ -69,27 +69,27 @@ function Alle_Fotos() {
   output.innerHTML = "<h2>Alle Fotos:</h2>";
 
   fotosNatur.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Natur/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 
   fotosTiere.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Tiere/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 
   fotosStadt_Straße.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Stadt_Strasse/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 
   fotosAnlaesse.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Anlaesse/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 
   fotosFamilie_Freunde.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Familie_Freunde/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 
   fotosSchwarzWeiss.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="/img/fotos/Schwarz_Weiss/${element.src}">`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}"  src="${element.src}">`;
   });
 }
 function Natur() {
@@ -97,7 +97,7 @@ function Natur() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Natur:</h2>";
   fotosNatur.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}" src="/img/fotos/Natur/${element.src}" >`;
+    output.innerHTML += `<img class="main_img" alt="${element.alt}" src="${element.src}" >`;
   });
 }
 function Tiere() {
@@ -105,7 +105,7 @@ function Tiere() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Tiere:</h2>";
   fotosTiere.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="/img/fotos/Tiere/${element.src}">`;
+    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 function Stadt_Straße() {
@@ -113,7 +113,7 @@ function Stadt_Straße() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Stadt & Straße:</h2>";
   fotosStadt_Straße.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="/img/fotos/Stadt_Strasse/${element.src}">`;
+    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 function Anlaesse() {
@@ -121,7 +121,7 @@ function Anlaesse() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Anlässe:</h2>";
   fotosAnlaesse.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="/img/fotos/Anlaesse/${element.src}">`;
+    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 function Familie_Freunde() {
@@ -129,7 +129,7 @@ function Familie_Freunde() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Familie & Freunde:</h2>";
   fotosFamilie_Freunde.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="/img/fotos/Familie_Freunde/${element.src}">`;
+    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 function Schwarz_Weiss() {
@@ -137,25 +137,23 @@ function Schwarz_Weiss() {
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Schwarz Weiß:</h2>";
   fotosSchwarzWeiss.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="/img/fotos/Schwarz_Weiss/${element.src}">`;
+    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 function btnClose(){
     document.getElementById("bild_click").classList.add("hide");
 }
 
-document.getElementById("main_class").addEventListener("click", dialog);
-
-function dialog(e){
-  console.log(e);
+document.getElementById("main_class").addEventListener("click", function (e){
   if (e.target && e.target.classList.contains("main_img")) {
+
     document.getElementById("bild_click").innerHTML = `
 
 <div class="dialog">   
 
   <header class="dialog_header">
-        <p>Name: ${e.target.alt} </p>
-        <button onclick="btnClose()" >close</button>
+        <h5>${e.target.alt} </h5>
+        <a onclick="btnClose()"><img class="icon_close" src="/img/close.png"></a>
   </header>
 
   <main class="dialog_main">
@@ -163,14 +161,14 @@ function dialog(e){
   </main>
 
   <footer class="dialog_footer">
-    <button onclick="btnVorheriges()">Vorheriges</button>
-    <button onclick="btnNaechstes()" >Nächstes</button>
+    <a onclick="btnVorheriges()"><img class="dialog_icon" src="/img/back.png"></a>
+    <a onclick="btnNaechstes()"><img class="dialog_icon" src="/img/next.svg"></a>
   </footer>
   
 </div>    `;
     document.getElementById("bild_click").classList.remove("hide");
   }
-}
+});
 
 
 function btnNaechstes(){
