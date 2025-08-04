@@ -239,9 +239,31 @@ function Über_mich() {
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = `
-<p>Über_mich</p>
+  <section class="kontank_div">
+    <div class="Über_mich"">
+    <h2>Über mich</h2>
+
+    <p>
+     Hallo! Ich bin <strong>Younes Darabi</strong>, leidenschaftlicher Fotograf mit Blick fürs Unsichtbare.  
+     Meine Reise in die Welt der Fotografie begann mit einer alten analogen Kamera – und der Neugier, Geschichten durch Bilder zu erzählen.
+    </p><br>
+
+    <p>
+      Ich liebe es, echte Momente einzufangen – ob auf der Straße, in der Natur oder in den Augen eines Menschen. Mein Stil bewegt sich zwischen Minimalismus, dokumentarischer Ehrlichkeit und kreativer Freiheit.
+    </p><br>
+
+    <p>
+      Fotogram ist mein persönlicher Raum zum Teilen, Erkunden und Experimentieren. Jedes Bild auf dieser Seite erzählt ein Stück von mir – und vielleicht auch von dir.
+    </p><br>
+
+    <p>
+      Danke, dass du hier bist. Wenn du Fragen hast oder einfach nur „Hi“ sagen willst, schreib mir gerne über das <a onclick="Kontakt()">Kontaktformular</a>.
+    </p>
+    </div>
+  </section>
 `;
 }
+
 function Kontakt() {
   btnClose();
   let output = document.getElementById("main_section");
