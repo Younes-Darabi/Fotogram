@@ -338,12 +338,12 @@ li:hover::before {
 form {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f1ab;
-    border-radius: 10px;
+    /* background-color: #f0f0f1ab; */
+    /* border-radius: 10px; */
     padding: 10px;
     width: 400px;
     gap: 20px;
-    border: 1px solid #1f1d2827;
+    /* border: 1px solid #1f1d2827; */
 }
 
 textarea {
@@ -371,19 +371,28 @@ textarea {
 
 }
 
+.div_senden {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .senden {
-    background-color: #1f1d2883;
+    background-color: #1f1d2827;
     font-size: 16px;
-    color: white;
+    color: #1f1d28;
     border-style: none;
     border-radius: 5px;
-    padding: 10px 26px;
+    padding: 8px 26px;
     cursor: pointer;
     align-self: center;
     border: 1px solid #1f1d2827;
+    transition: all 500ms ease-in-out;
+
 }
 
 .senden:hover {
-    background-color: #1F1D28;
+    background-color: #1f1d28;
+    border: 1px solid ;
+    color: #ffffff;
     scale: 1.01;
 }

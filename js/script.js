@@ -261,11 +261,20 @@ function Kontakt() {
       <label>Ihre Nachricht:
         <textarea rows="10" name="message" required></textarea>
       </label>
-
-      <input class="senden" type="submit" value="Nachricht senden" />
-
+      <div class="div_senden">
+        <input onclick=email_senden() class="senden" type="submit" value="Nachricht senden" />
+      </div>
     </form>
   <div>
+`;
+}
+function email_senden(){
+  let output = document.getElementById("main_section");
+  output.innerHTML = `
+  <p class="kontank_div">
+    Danke für Ihre Nachricht!<br>
+    Schön, dass Sie uns geschrieben haben. Wir melden uns in Kürze bei Ihnen.
+  </p>
 `;
 }
 function impressum() {
