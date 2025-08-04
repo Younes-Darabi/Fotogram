@@ -173,7 +173,6 @@ function btnVorheriges() {
   }
 }
 
-
 document.getElementById("main_class").addEventListener("click", function (e) {
   if (e.target && e.target.classList.contains("main_img")) {
     clickedSrc = e.target.getAttribute("src");
@@ -229,7 +228,6 @@ function updateDialog() {
   document.getElementById("bild_click").classList.remove("hide");
 }
 
-
 function Startseite() {
   btnClose();
   let output = document.getElementById("main_section");
@@ -249,19 +247,111 @@ function Kontakt() {
   let output = document.getElementById("main_section");
   output.innerHTML = `
   <div class="kontank_div">
-    <h2>Kontakt</h2>
-   <p>
-   Haben Sie Fragen, Anregungen oder benötigen Sie weitere Informationen?  
-   Dann zögern Sie nicht, uns zu kontaktieren. Wir freuen uns auf Ihre Nachricht!
-   </p><br>
+    <form>
+      <h2>Kontaktieren Sie uns</h2>
 
-    <p>
-   Sie erreichen uns über die folgenden Kontaktmöglichkeiten:
-   </p><br>
+      <label>Ihr Name:
+        <input class="text-box" type="text" name="name" required />
+      </label>
 
-    <a href="#">E-Mail: info@beispiel.de</a>
-    <a href="#">Telefon: +49 123 456789</a>
-    <a href="#">Adresse: Musterstraße 12, 12345 Musterstadt</a>
+      <label>Ihre E-Mail-Adresse:
+        <input class="text-box" type="email" name="email" required />
+      </label>
+
+      <label>Ihre Nachricht:
+        <textarea rows="10" name="message" required></textarea>
+      </label>
+
+      <input class="senden" type="submit" value="Nachricht senden" />
+
+    </form>
   <div>
+`;
+}
+function impressum() {
+  btnClose();
+  let output = document.getElementById("main_section");
+  output.innerHTML = `
+<section class="impressum">
+  <h1>Impressum:</h1>
+
+  <h2>Angaben gemäß § 5 TMG</h2>
+  <p>
+    Younes Darabi<br>
+    Musterstraße 123<br>
+    12345 Musterstadt<br>
+    Deutschland
+  </p>
+
+  <p>
+    E-Mail: <a href="mailto:kontakt@example.de">kontakt@example.de</a><br>
+    Telefon: +49 (0) 012 34567890<br>
+    Website: <a href="https://www.Musterstraße.de" target="_blank">www.example.de</a>
+  </p>
+
+  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+  <p>
+    Younes Darabi<br>
+    Musterstraße 123<br>
+    12345 Musterstadt
+  </p>
+
+  <h2>Haftungsausschluss</h2>
+  <p>
+    Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+  </p>
+
+  <h2>Urheberrecht</h2>
+  <p>
+    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind entsprechend gekennzeichnet.
+  </p>
+</section>
+`;
+}
+
+function datenschutz() {
+  btnClose();
+  let output = document.getElementById("main_section");
+  output.innerHTML = `
+<section  class="impressum">
+  <h1>Datenschutzerklärung:</h1>
+
+  <p>
+    Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG).
+  </p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    Younes Darabi<br>
+    Musterstraße 123<br>
+    12345 Musterstadt<br>
+    E-Mail: <a href="mailto:kontakt@example.de">kontakt@example.de</a>
+  </p>
+
+  <h2>2. Erhebung und Verarbeitung von Daten</h2>
+  <p>
+    Beim Besuch dieser Website werden automatisch Informationen (z. B. IP-Adresse, Browsertyp) erfasst. Diese Daten dienen ausschließlich der technischen Sicherheit und werden nicht zur Identifizierung verwendet.
+  </p>
+
+  <h2>3. Kontaktaufnahme</h2>
+  <p>
+    Wenn Sie uns per E-Mail kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+  </p>
+
+  <h2>4. Ihre Rechte</h2>
+  <p>
+    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Kontaktieren Sie uns dazu per E-Mail.
+  </p>
+
+  <h2>5. Änderungen</h2>
+  <p>
+    Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren.
+  </p>
+
+  <p style="margin-top: 2rem;">
+    Stand: August 2025
+  </p>
+</section>
+
 `;
 }

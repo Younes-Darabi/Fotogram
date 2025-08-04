@@ -28,7 +28,7 @@ body {
 
 p {
     margin: 0;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 span {
@@ -82,7 +82,7 @@ button {
 
 a {
     text-decoration: none;
-    color: rgb(230, 230, 230);
+    color: black;
 }
 
 /* ----------------------------------header */
@@ -170,6 +170,31 @@ li:hover::before {
 }
 
 .social_media img:hover {
+    filter: invert(39%) sepia(66%) saturate(658%) hue-rotate(322deg) brightness(101%) contrast(95%);
+    cursor: pointer;
+}
+
+.impressum {
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.impressum_datenschutz {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+.impressum_datenschutz a {
+    color: rgb(230, 230, 230);
+    transition: all 500ms ease-in-out;
+}
+
+.impressum_datenschutz a:hover {
     filter: invert(39%) sepia(66%) saturate(658%) hue-rotate(322deg) brightness(101%) contrast(95%);
     cursor: pointer;
 }
@@ -301,16 +326,64 @@ li:hover::before {
     filter: invert(20%) sepia(25%) saturate(1300%) hue-rotate(170deg) brightness(90%) contrast(90%);
 }
 
-/* ---------------------------------- */
+/* --------------------kontakt-------------------- */
 .kontank_div {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    color: #1F435B;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 79vh;
 }
 
-.kontank_div a {
-    color: #1F435B;
-    font-size: 15px;
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f1ab;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    gap: 20px;
+    border: 1px solid #1f1d2827;
+}
+
+textarea {
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #1f1d2827;
+
+}
+
+.text-box {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border-style: none;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: 1px solid #1f1d2827;
+
+}
+
+.senden {
+    background-color: #1f1d2883;
+    font-size: 16px;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px 26px;
+    cursor: pointer;
+    align-self: center;
+    border: 1px solid #1f1d2827;
+}
+
+.senden:hover {
+    background-color: #1F1D28;
+    scale: 1.01;
 }
