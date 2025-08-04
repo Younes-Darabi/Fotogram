@@ -464,6 +464,7 @@ h6:hover {
     .header_mob {
         margin-top: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         background-color: #1F1D28;
         border-radius: 10px 10px 0 0;
@@ -476,7 +477,8 @@ h6:hover {
     }
 
     .title_mob {
-        margin: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -504,35 +506,208 @@ h6:hover {
         border-radius: 0;
     }
 
-    /* -----------------Menü------------- */
-    /* .mob_menu {
-        margin-top: 20px;
+    /* -----------------Tablet Menü------------- */
+
+    .Tablet_menu {
+        position: absolute;
+        right: 2.6%;
+        top: 218px;
+        z-index: 10;
+        background-color: #1a1922;
+        border-radius: 5px;
+    }
+    .Tablet_menu nav {
+        margin: 0 30px;
+    }
+
+    .Tablet_menu li {
+        padding: 5px 10px;
+        transition: all 500ms ease-in-out;
+        border: 1px solid #15141b6f;
+        background-color: #1a192276;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .Tablet_menu ul {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-    } */
+        list-style: none;
+        padding-left: 0;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .Tablet_menu li:hover {
+        position: relative;
+        background-color: #1a1922;
+        cursor: pointer;
+        border: 1px solid #ea5a5a2a;
+    }
+
+    .Tablet_menu li:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #EA5A5A;
+        border-radius: 2px;
+    }
+
+    /* -----------------Menü------------- */
     .header_mob nav {
         margin-right: 30px;
+    }
+
+    .mob_menu {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .mob_menu ul {
         display: flex;
         list-style: none;
         padding-left: 0;
+        gap: 5px;
+        text-align: center;
     }
 
     .mob_menu li {
         padding: 5px 10px;
         transition: all 500ms ease-in-out;
+        border: 1px solid #15141b6f;
+        background-color: #1a192276;
+        border-radius: 5px;
+        font-size: 14px;
     }
 
     .mob_menu li:hover {
         position: relative;
         background-color: #1a1922;
         cursor: pointer;
+        border: 1px solid #ea5a5a2a;
     }
 
     .mob_menu li:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #EA5A5A;
+        border-radius: 2px;
+    }
+
+    .arro {
+        filter: invert(85%);
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+    }
+}
+
+
+@media(max-width:610px) {
+    .header_mob {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mob_menu ul {
+        flex-direction: row;
+    }
+}
+
+@media(max-width:475px) {
+    .hide475 {
+        display: none;
+    }
+
+    .title_mob {
+        margin: 15px;
+    }
+
+    .mob_menu nav {
+        background-color: #1a1922;
+        margin: 0;
+        padding: 0 15px;
+        border-radius: 5px;
+    }
+
+    .mob_menu {
+        position: absolute;
+        right: 2.8%;
+        top: 180px;
+        z-index: 10;
+        background-color: #1a1922;
+        border-radius: 5px;
+    }
+
+    .mob_menu ul {
+        flex-direction: column;
+    }
+
+    .Main_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        cursor: pointer;
+        gap: 3px;
+        border: 1px solid #1a1922;
+        background-color: #1a1922;
+        border-radius: 3px;
+        padding: 3px;
+    }
+
+    .Main_menu span {
+        width: 25px;
+        height: 3px;
+        background: #ffffff;
+        display: block;
+        border-radius: 1px solid #1a1922;
+    }
+    /* ------------------------- */
+    .Tablet_menu {
+        position: absolute;
+        right: 2.8%;
+        top: 344px;
+        z-index: 10;
+        background-color: #1a1922;
+        border-radius: 5px;
+    }
+    .Tablet_menu nav {
+        margin: 0 30px;
+    }
+
+    .Tablet_menu li {
+        padding: 5px 10px;
+        transition: all 500ms ease-in-out;
+        border: 1px solid #15141b6f;
+        background-color: #1a192276;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .Tablet_menu ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .Tablet_menu li:hover {
+        position: relative;
+        background-color: #1a1922;
+        cursor: pointer;
+        border: 1px solid #ea5a5a2a;
+    }
+
+    .Tablet_menu li:hover::before {
         content: "";
         position: absolute;
         left: 0;

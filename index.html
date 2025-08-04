@@ -66,23 +66,29 @@
                 <div class="title_mob">
                     <img class="logo_mob" src="/img/favicon.png" alt="Fotogram Logo">
                     <div>
-                    <h1>Fotogram</h1> 
-                    <h4>Momente vergehen Bilder bleiben!</h4>    
+                        <h1>Fotogram</h1>
+                        <h4 class="hide475">Momente vergehen Bilder bleiben!</h4>
                     </div>
                 </div>
-
-                <div class="mob_menu">
+                <div onclick="Main_menu()" class="Main_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mob_menu" class="mob_menu hide475">
                     <nav>
                         <ul>
-                            <li class="li_mob" onclick="Startseite()">Startseite</li>
-                            <li class="li_mob" onclick="Über_mich()">Über mich</li>
-                            <li class="li_mob" onclick="Kontakt()">Kontakt</li>
+                            <li class="li_mob" onclick="Startseite()">STARTSEITE</li>
+                            <li class="li_mob" onclick="Über_mich()">ÜBER MICH</li>
+                            <li class="li_mob" onclick="Kontakt()">KONTAKT</li>
+                            <li class="li_mob" onclick="Tablet_menu()">ALBUMS
+                                <img class="arro" src="/img/white-arro.png">
+                            </li>
                         </ul>
                     </nav>
                 </div>
 
-                <!-- <div class="kategori">
-                    <h3>ALBUMS</h3>
+                <div id="Tablet_menu" class="Tablet_menu desk_none mob_none">
                     <nav>
                         <ul>
                             <li onclick="Natur()">Natur</li>
@@ -93,7 +99,8 @@
                             <li onclick="Schwarz_Weiss()">Schwarz Weiß</li>
                         </ul>
                     </nav>
-                </div> -->
+                </div>
+
             </div>
 
         </header>
@@ -101,6 +108,7 @@
         <main class="main_class">
 
             <section id="main_section"></section>
+            
             <div id="bild_click" class="bild_click hide"></div>
 
             <section id="Startseite" class="display_none">

@@ -107,6 +107,8 @@ let arraySum = [
 ];
 
 function Natur() {
+  document.getElementById('Tablet_menu').classList.add('mob_none');
+  document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Natur:</h2>";
@@ -115,6 +117,8 @@ function Natur() {
   });
 }
 function Tiere() {
+    document.getElementById('Tablet_menu').classList.add('mob_none');
+    document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Tiere:</h2>";
@@ -123,6 +127,8 @@ function Tiere() {
   });
 }
 function Stadt_Straße() {
+    document.getElementById('Tablet_menu').classList.add('mob_none');
+    document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Stadt & Straße:</h2>";
@@ -131,6 +137,8 @@ function Stadt_Straße() {
   });
 }
 function Anlaesse() {
+    document.getElementById('Tablet_menu').classList.add('mob_none');
+    document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Anlässe:</h2>";
@@ -139,6 +147,8 @@ function Anlaesse() {
   });
 }
 function Familie_Freunde() {
+    document.getElementById('Tablet_menu').classList.add('mob_none');
+    document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Familie & Freunde:</h2>";
@@ -147,6 +157,8 @@ function Familie_Freunde() {
   });
 }
 function Schwarz_Weiss() {
+    document.getElementById('Tablet_menu').classList.add('mob_none');
+    document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Schwarz Weiß:</h2>";
@@ -229,6 +241,7 @@ function updateDialog() {
 }
 
 function Startseite() {
+  document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   let Startseite = document.getElementById("Startseite");
@@ -236,6 +249,7 @@ function Startseite() {
 }
 
 function Über_mich() {
+  document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   let Über_mich = document.getElementById("Über_mich");
@@ -243,6 +257,7 @@ function Über_mich() {
 }
 
 function Kontakt() {
+  document.getElementById('mob_menu').classList.add('hide475');
   btnClose();
   let output = document.getElementById("main_section");
   let Kontakt = document.getElementById("Kontakt");
@@ -263,8 +278,17 @@ function impressum() {
 }
 
 function datenschutz() {
+
   btnClose();
   let output = document.getElementById("main_section");
   let datenschutz = document.getElementById("datenschutz");
   output.innerHTML = datenschutz.innerHTML;
+}
+function Main_menu(){
+  document.getElementById('mob_menu').classList.toggle('hide475');
+  document.getElementById('Tablet_menu').classList.add('mob_none');
+}
+function Tablet_menu(){
+    document.getElementById('Tablet_menu').classList.toggle('mob_none');
+
 }
