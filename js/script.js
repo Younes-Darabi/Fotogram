@@ -173,7 +173,7 @@ function btnVorheriges() {
   }
 }
 
-document.getElementById("main_class").addEventListener("click", function (e) {
+document.getElementById("main_section").addEventListener("click", function (e) {
   if (e.target && e.target.classList.contains("main_img")) {
     clickedSrc = e.target.getAttribute("src");
     dialog(e);
@@ -200,7 +200,7 @@ function updateDialog() {
   const currentArrayLength = currentArray.length;
 
   document.getElementById("bild_click").innerHTML = `
-<div class="dialog">   
+  <div class="dialog">   
 
   <header class="dialog_header">
         <h5>${currentItem.alt}</h5>
@@ -223,7 +223,7 @@ function updateDialog() {
     <a onclick="btnNaechstes()"><img class="dialog_icon" src="/img/next.svg"></a>
   </footer>
   
-</div>
+  </div>
   `;
   document.getElementById("bild_click").classList.remove("hide");
 }
@@ -231,158 +231,40 @@ function updateDialog() {
 function Startseite() {
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-<p>Startseite</p>
-`;
+  let Startseite = document.getElementById("Startseite");
+  output.innerHTML = Startseite.innerHTML;
 }
+
 function Über_mich() {
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-  <section class="kontank_div">
-    <div class="Über_mich"">
-    <h2>Über mich</h2>
-
-    <p>
-     Hallo! Ich bin <strong>Younes Darabi</strong>, leidenschaftlicher Fotograf mit Blick fürs Unsichtbare.  
-     Meine Reise in die Welt der Fotografie begann mit einer alten analogen Kamera – und der Neugier, Geschichten durch Bilder zu erzählen.
-    </p><br>
-
-    <p>
-      Ich liebe es, echte Momente einzufangen – ob auf der Straße, in der Natur oder in den Augen eines Menschen. Mein Stil bewegt sich zwischen Minimalismus, dokumentarischer Ehrlichkeit und kreativer Freiheit.
-    </p><br>
-
-    <p>
-      Fotogram ist mein persönlicher Raum zum Teilen, Erkunden und Experimentieren. Jedes Bild auf dieser Seite erzählt ein Stück von mir – und vielleicht auch von dir.
-    </p><br>
-
-    <p>
-      Danke, dass du hier bist. Wenn du Fragen hast oder einfach nur „Hi“ sagen willst, schreib mir gerne über das <a onclick="Kontakt()">Kontaktformular</a>.
-    </p>
-    </div>
-  </section>
-`;
+  let Über_mich = document.getElementById("Über_mich");
+  output.innerHTML = Über_mich.innerHTML;
 }
 
 function Kontakt() {
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-  <div class="kontank_div">
-    <form>
-      <h2>Kontaktieren Sie uns</h2>
-
-      <label>Ihr Name:
-        <input class="text-box" type="text" name="name" required />
-      </label>
-
-      <label>Ihre E-Mail-Adresse:
-        <input class="text-box" type="email" name="email" required />
-      </label>
-
-      <label>Ihre Nachricht:
-        <textarea rows="10" name="message" required></textarea>
-      </label>
-      <div class="div_senden">
-        <input onclick=email_senden() class="senden" type="submit" value="Nachricht senden" />
-      </div>
-    </form>
-  <div>
-`;
+  let Kontakt = document.getElementById("Kontakt");
+  output.innerHTML = Kontakt.innerHTML;
 }
-function email_senden(){
+
+function email_senden() {
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-  <p class="kontank_div">
-    Danke für Ihre Nachricht!<br>
-    Schön, dass Sie uns geschrieben haben. Wir melden uns in Kürze bei Ihnen.
-  </p>
-`;
+  let email_senden = document.getElementById("email_senden");
+  output.innerHTML = email_senden.innerHTML;
 }
+
 function impressum() {
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-<section class="impressum">
-  <h1>Impressum:</h1>
-
-  <h2>Angaben gemäß § 5 TMG</h2>
-  <p>
-    Younes Darabi<br>
-    Musterstraße 123<br>
-    12345 Musterstadt<br>
-    Deutschland
-  </p>
-
-  <p>
-    E-Mail: <a href="mailto:kontakt@example.de">kontakt@example.de</a><br>
-    Telefon: +49 (0) 012 34567890<br>
-    Website: <a href="https://www.Musterstraße.de" target="_blank">www.example.de</a>
-  </p>
-
-  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-  <p>
-    Younes Darabi<br>
-    Musterstraße 123<br>
-    12345 Musterstadt
-  </p>
-
-  <h2>Haftungsausschluss</h2>
-  <p>
-    Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-  </p>
-
-  <h2>Urheberrecht</h2>
-  <p>
-    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind entsprechend gekennzeichnet.
-  </p>
-</section>
-`;
+  let impressum = document.getElementById("impressum");
+  output.innerHTML = impressum.innerHTML;
 }
 
 function datenschutz() {
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `
-<section  class="impressum">
-  <h1>Datenschutzerklärung:</h1>
-
-  <p>
-    Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG).
-  </p>
-
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Younes Darabi<br>
-    Musterstraße 123<br>
-    12345 Musterstadt<br>
-    E-Mail: <a href="mailto:kontakt@example.de">kontakt@example.de</a>
-  </p>
-
-  <h2>2. Erhebung und Verarbeitung von Daten</h2>
-  <p>
-    Beim Besuch dieser Website werden automatisch Informationen (z. B. IP-Adresse, Browsertyp) erfasst. Diese Daten dienen ausschließlich der technischen Sicherheit und werden nicht zur Identifizierung verwendet.
-  </p>
-
-  <h2>3. Kontaktaufnahme</h2>
-  <p>
-    Wenn Sie uns per E-Mail kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-  </p>
-
-  <h2>4. Ihre Rechte</h2>
-  <p>
-    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Kontaktieren Sie uns dazu per E-Mail.
-  </p>
-
-  <h2>5. Änderungen</h2>
-  <p>
-    Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren.
-  </p>
-
-  <p style="margin-top: 2rem;">
-    Stand: August 2025
-  </p>
-</section>
-
-`;
+  let datenschutz = document.getElementById("datenschutz");
+  output.innerHTML = datenschutz.innerHTML;
 }
