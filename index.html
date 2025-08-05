@@ -14,7 +14,11 @@
 <body onload="home()">
     <div class="main_div">
 
-        <!-- <div id="click_photo" class="click_photo hide"></div> -->
+        <section id="photo_viewer" class="photo_viewer hide">
+            <div onclick="logUp()" id="click_photo" class="click_photo">
+                <div onclick="logDown(event)" id="open_photo" class="open_photo"></div>
+            </div>
+        </section>
 
         <header>
             <div class="header_main mob_none">
@@ -112,7 +116,6 @@
         <main class="main_class">
 
             <section id="main_section" class="main_section"></section>
-
             <section id="home" class="display_none">
                 <div>
                     <img onclick="nature()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
@@ -123,8 +126,7 @@
                     <h6 onclick="animals()">Tiere</h6>
                 </div>
                 <div>
-                    <img onclick="cityStreet()" class="menu"
-                        src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
+                    <img onclick="cityStreet()" class="menu" src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
                     <h6 onclick="cityStreet()">Stadt & Straße</h6>
                 </div>
                 <div>

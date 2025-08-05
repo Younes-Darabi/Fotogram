@@ -170,83 +170,6 @@ function blackWhite() {
   });
 }
 
-function btnClose() {
-  document.getElementById("click_photo").classList.add("hide");
-}
-
-function btnNaechstes() {
-  if (currentIndex < currentArray.length - 1) {
-    currentIndex++;
-    updateDialog();
-  }
-}
-
-function btnVorheriges() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateDialog();
-  }
-}
-
-document.getElementById("main_section").addEventListener("click", function (e) {
-  if (e.target && e.target.classList.contains("main_img")) {
-    clickedSrc = e.target.getAttribute("src");
-    dialog(e);
-  }
-});
-
-function dialog(e) {
-  clickedSrc = e.target.getAttribute("src");
-
-  SumArrays.forEach((onearray) => {
-    onearray.forEach((element, index) => {
-      if (element.src === clickedSrc) {
-        currentArray = onearray;
-        currentIndex = index;
-      }
-    });
-  });
-
-  updateDialog();
-}
-
-function updateDialog() {
-  const currentItem = currentArray[currentIndex];
-  const currentArrayLength = currentArray.length;
-
-
-  document.getElementById("clickPhoto").innerHTML = ImageDisplayDialog(currentItem,currentArrayLength);
-  document.getElementById("clickPhoto").classList.remove("hide");
-}
-
-function ImageDisplayDialog(){
-  return`
-    <div class="dialog">   
-
-    <header class="dialog_header">
-        <h5>${currentItem.alt}</h5>
-        <a onclick="btnClose()"><img class="icon_close" src="./img/close.png"></a>
-    </header>
-
-    <main class="dialog_main">
-      <img class="dialog_img" src="${currentItem.src}">
-    </main>
-
-    <footer class="dialog_footer">
-       <a onclick="btnVorheriges()"><img class="dialog_icon" src="./img/back.png"></a>
-
-       <div class="dialog_main">
-        <h5>${currentIndex + 1}</h5>
-        <img class="dialog_slash" src="./img/slash.png">
-        <h5>${currentArrayLength}</h5>
-       </div>
-
-      <a onclick="btnNaechstes()"><img class="dialog_icon" src="./img/next.svg"></a>
-    </footer>
-  </div>`;
-}
-
-
 function home() {
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
@@ -296,4 +219,92 @@ function mainMenu() {
 }
 function tabletMenu() {
   document.getElementById("tablet_menu").classList.toggle("mob_none");
+}
+
+function btnClose() {
+  document.getElementById("photo_viewer").classList.add("hide");
+}
+
+function btnNext() {
+  if (currentIndex < currentArray.length - 1) {
+    currentIndex++;
+    updateDialog();
+  }
+}
+
+function btnPrevious() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateDialog();
+  }
+}
+
+
+
+
+
+
+document.getElementById("main_section").addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("main_img")) {
+    clickedSrc = e.target.getAttribute("src");
+    dialog(e);
+  }
+});
+
+function dialog(e) {
+  clickedSrc = e.target.getAttribute("src");
+
+  SumArrays.forEach((onearray) => {
+    onearray.forEach((element, index) => {
+      if (element.src === clickedSrc) {
+        currentArray = onearray;
+        currentIndex = index;
+      }
+    });
+  });
+
+  updateDialog();
+}
+
+function updateDialog() {
+  let currentItem = currentArray[currentIndex];
+  currentArrayLength = currentArray.length;
+  document.getElementById("photo_viewer").classList.remove("hide");
+
+  
+  document.getElementById("open_photo").innerHTML = ImageDisplayDialog(currentItem,currentArrayLength,currentIndex);
+}
+
+function ImageDisplayDialog(currentItem,currentArrayLength,currentIndex){
+  return`
+    <div class="dialog">   
+
+    <header class="dialog_header">
+        <h5>${currentItem.alt}</h5>
+        <a onclick="btnClose()"><img class="icon_close" src="./img/close.png"></a>
+    </header>
+
+    <main class="dialog_main">
+      <img class="dialog_img" src="${currentItem.src}">
+    </main>
+
+    <footer class="dialog_footer">
+       <a onclick="btnPrevious()"><img class="dialog_icon" src="./img/back.png"></a>
+
+       <div class="dialog_main">
+        <h5>${currentIndex + 1}</h5>
+        <img class="dialog_slash" src="./img/slash.png">
+        <h5>${currentArrayLength}</h5>
+       </div>
+
+      <a onclick="btnNext()"><img class="dialog_icon" src="./img/next.svg"></a>
+    </footer>
+  </div>`;
+}
+
+function logUp(){
+  btnClose();
+}
+function logDown(event){
+  event.stopPropagation();
 }
