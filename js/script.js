@@ -2,9 +2,12 @@ let currentArray = null;
 let currentIndex = null;
 let currentArrayLength = null;
 
-let fotosAnlaesse = [
+let occasionalPhotos = [
   { src: "./img/fotos/Anlaesse/birth-5407332_1280.jpg", alt: "birth" },
-  { src: "./img/fotos/Anlaesse/bridal-bouquet-2720592_1280.jpg", alt: "bridal" },
+  {
+    src: "./img/fotos/Anlaesse/bridal-bouquet-2720592_1280.jpg",
+    alt: "bridal",
+  },
   { src: "./img/fotos/Anlaesse/crowd-2140590_1280.jpg", alt: "crowd" },
   { src: "./img/fotos/Anlaesse/german-3504961_1280.jpg", alt: "Germany" },
   { src: "./img/fotos/Anlaesse/presents-6904620_1280.jpg", alt: "presents" },
@@ -17,7 +20,7 @@ let fotosAnlaesse = [
     alt: "sparkling",
   },
 ];
-let fotosFamilie_Freunde = [
+let familyFriendsPhotos = [
   { src: "./img/fotos/Familie_Freunde/baby-7648901_1280.jpg", alt: "baby" },
   {
     src: "./img/fotos/Familie_Freunde/children-4894710_1280.jpg",
@@ -35,7 +38,7 @@ let fotosFamilie_Freunde = [
     alt: "siblings",
   },
 ];
-let fotosNatur = [
+let naturePhotos = [
   { src: "./img/fotos/Natur/Frühling_2025_1.jpg", alt: "Frühling 1" },
   { src: "./img/fotos/Natur/Frühling_2025_2.jpg", alt: "Frühling 2" },
   { src: "./img/fotos/Natur/Frühling_2025_3.jpg", alt: "Frühling 3" },
@@ -50,7 +53,7 @@ let fotosNatur = [
   { src: "./img/fotos/Natur/Winter_2024_2.jpg", alt: "Winter 2" },
   { src: "./img/fotos/Natur/Winter_2024_5.jpg", alt: "Winter 3" },
 ];
-let fotosSchwarzWeiss = [
+let blackWhitePhotos = [
   {
     src: "./img/fotos/Schwarz_Weiss/black-white-2474682_1280.jpg",
     alt: "black-white",
@@ -67,7 +70,7 @@ let fotosSchwarzWeiss = [
   { src: "./img/fotos/Schwarz_Weiss/schwarz-5346585_1280.jpg", alt: "schwarz" },
   { src: "./img/fotos/Schwarz_Weiss/strom-1017632_1280.jpg", alt: "strom" },
 ];
-let fotosStadt_Straße = [
+let cityStreetPhotos = [
   {
     src: "./img/fotos/Stadt_Strasse/bremen-town-musicians-230849_1280.jpg",
     alt: "bremen town musicians",
@@ -88,7 +91,7 @@ let fotosStadt_Straße = [
   { src: "./img/fotos/Stadt_Strasse/Winter_2024_4.jpg", alt: "Winter" },
   { src: "./img/fotos/Stadt_Strasse/Winter_2024_6.jpg", alt: "Winter" },
 ];
-let fotosTiere = [
+let animalsPhotos = [
   { src: "./img/fotos/Tiere/animal-9650392_1280.jpg", alt: "animal" },
   { src: "./img/fotos/Tiere/cat-9734651_1280.jpg", alt: "cat" },
   { src: "./img/fotos/Tiere/falcon-9697872_1280.jpg", alt: "falcon" },
@@ -97,78 +100,78 @@ let fotosTiere = [
   { src: "./img/fotos/Tiere/Sommer4.jpg", alt: "Sommer" },
 ];
 
-let arraySum = [
-  fotosAnlaesse,
-  fotosFamilie_Freunde,
-  fotosNatur,
-  fotosSchwarzWeiss,
-  fotosStadt_Straße,
-  fotosTiere,
+let SumArrays = [
+  occasionalPhotos,
+  familyFriendsPhotos,
+  naturePhotos,
+  blackWhitePhotos,
+  cityStreetPhotos,
+  animalsPhotos,
 ];
 
-function Natur() {
-  document.getElementById('Tablet_menu').classList.add('mob_none');
-  document.getElementById('mob_menu').classList.add('hide475');
+function nature() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Natur:</h2>";
-  fotosNatur.forEach((element) => {
+  naturePhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img" alt="${element.alt}" src="${element.src}" >`;
   });
 }
-function Tiere() {
-    document.getElementById('Tablet_menu').classList.add('mob_none');
-    document.getElementById('mob_menu').classList.add('hide475');
+function animals() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Tiere:</h2>";
-  fotosTiere.forEach((element) => {
+  animalsPhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
-function Stadt_Straße() {
-    document.getElementById('Tablet_menu').classList.add('mob_none');
-    document.getElementById('mob_menu').classList.add('hide475');
+function cityStreet() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Stadt & Straße:</h2>";
-  fotosStadt_Straße.forEach((element) => {
+  cityStreetPhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
-function Anlaesse() {
-    document.getElementById('Tablet_menu').classList.add('mob_none');
-    document.getElementById('mob_menu').classList.add('hide475');
+function occasions() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Anlässe:</h2>";
-  fotosAnlaesse.forEach((element) => {
+  occasionalPhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
-function Familie_Freunde() {
-    document.getElementById('Tablet_menu').classList.add('mob_none');
-    document.getElementById('mob_menu').classList.add('hide475');
+function familyFriends() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Familie & Freunde:</h2>";
-  fotosFamilie_Freunde.forEach((element) => {
+  familyFriendsPhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
-function Schwarz_Weiss() {
-    document.getElementById('Tablet_menu').classList.add('mob_none');
-    document.getElementById('mob_menu').classList.add('hide475');
+function blackWhite() {
+  document.getElementById("tablet_menu").classList.add("mob_none");
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
   output.innerHTML = "<h2>Schwarz Weiß:</h2>";
-  fotosSchwarzWeiss.forEach((element) => {
+  blackWhitePhotos.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 
 function btnClose() {
-  document.getElementById("bild_click").classList.add("hide");
+  document.getElementById("click_photo").classList.add("hide");
 }
 
 function btnNaechstes() {
@@ -195,7 +198,7 @@ document.getElementById("main_section").addEventListener("click", function (e) {
 function dialog(e) {
   clickedSrc = e.target.getAttribute("src");
 
-  arraySum.forEach((onearray) => {
+  SumArrays.forEach((onearray) => {
     onearray.forEach((element, index) => {
       if (element.src === clickedSrc) {
         currentArray = onearray;
@@ -211,57 +214,61 @@ function updateDialog() {
   const currentItem = currentArray[currentIndex];
   const currentArrayLength = currentArray.length;
 
-  document.getElementById("bild_click").innerHTML = `
-  <div class="dialog">   
 
-  <header class="dialog_header">
+  document.getElementById("clickPhoto").innerHTML = ImageDisplayDialog(currentItem,currentArrayLength);
+  document.getElementById("clickPhoto").classList.remove("hide");
+}
+
+function ImageDisplayDialog(){
+  return`
+    <div class="dialog">   
+
+    <header class="dialog_header">
         <h5>${currentItem.alt}</h5>
         <a onclick="btnClose()"><img class="icon_close" src="./img/close.png"></a>
-  </header>
+    </header>
 
-  <main class="dialog_main">
-    <img class="dialog_img" src="${currentItem.src}">
-  </main>
+    <main class="dialog_main">
+      <img class="dialog_img" src="${currentItem.src}">
+    </main>
 
-  <footer class="dialog_footer">
-    <a onclick="btnVorheriges()"><img class="dialog_icon" src="./img/back.png"></a>
+    <footer class="dialog_footer">
+       <a onclick="btnVorheriges()"><img class="dialog_icon" src="./img/back.png"></a>
 
-    <div class="dialog_main">
-      <h5>${currentIndex + 1}</h5>
-      <img class="dialog_slash" src="./img/slash.png">
-      <h5>${currentArrayLength}</h5>
-    </div>
+       <div class="dialog_main">
+        <h5>${currentIndex + 1}</h5>
+        <img class="dialog_slash" src="./img/slash.png">
+        <h5>${currentArrayLength}</h5>
+       </div>
 
-    <a onclick="btnNaechstes()"><img class="dialog_icon" src="./img/next.svg"></a>
-  </footer>
-  
-  </div>
-  `;
-  document.getElementById("bild_click").classList.remove("hide");
+      <a onclick="btnNaechstes()"><img class="dialog_icon" src="./img/next.svg"></a>
+    </footer>
+  </div>`;
 }
 
-function Startseite() {
-  document.getElementById('mob_menu').classList.add('hide475');
+
+function home() {
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
-  let Startseite = document.getElementById("Startseite");
-  output.innerHTML = Startseite.innerHTML;
+  let home = document.getElementById("home");
+  output.innerHTML = home.innerHTML;
 }
 
-function Über_mich() {
-  document.getElementById('mob_menu').classList.add('hide475');
+function aboutMe() {
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
-  let Über_mich = document.getElementById("Über_mich");
-  output.innerHTML = Über_mich.innerHTML;
+  let aboutMe = document.getElementById("aboutMe");
+  output.innerHTML = aboutMe.innerHTML;
 }
 
-function Kontakt() {
-  document.getElementById('mob_menu').classList.add('hide475');
+function contact() {
+  document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
-  let Kontakt = document.getElementById("Kontakt");
-  output.innerHTML = Kontakt.innerHTML;
+  let contact = document.getElementById("contact");
+  output.innerHTML = contact.innerHTML;
 }
 
 function email_senden() {
@@ -270,25 +277,23 @@ function email_senden() {
   output.innerHTML = email_senden.innerHTML;
 }
 
-function impressum() {
+function imprint() {
   btnClose();
   let output = document.getElementById("main_section");
-  let impressum = document.getElementById("impressum");
-  output.innerHTML = impressum.innerHTML;
+  let imprint = document.getElementById("imprint");
+  output.innerHTML = imprint.innerHTML;
 }
 
-function datenschutz() {
-
+function privacy() {
   btnClose();
   let output = document.getElementById("main_section");
-  let datenschutz = document.getElementById("datenschutz");
-  output.innerHTML = datenschutz.innerHTML;
+  let privacy = document.getElementById("privacy");
+  output.innerHTML = privacy.innerHTML;
 }
-function Main_menu(){
-  document.getElementById('mob_menu').classList.toggle('hide475');
-  document.getElementById('Tablet_menu').classList.add('mob_none');
+function mainMenu() {
+  document.getElementById("mob_menu").classList.toggle("hide475");
+  document.getElementById("tablet_menu").classList.add("mob_none");
 }
-function Tablet_menu(){
-    document.getElementById('Tablet_menu').classList.toggle('mob_none');
-
+function tabletMenu() {
+  document.getElementById("tablet_menu").classList.toggle("mob_none");
 }

@@ -11,8 +11,11 @@
     <title>Fotogram</title>
 </head>
 
-<body onload="Startseite()">
-    <div class="div_class">
+<body onload="home()">
+    <div class="main_div">
+
+        <!-- <div id="click_photo" class="click_photo hide"></div> -->
+
         <header>
             <div class="header_main mob_none">
                 <div class="title">
@@ -26,9 +29,9 @@
                     <h3>MENÜ</h3>
                     <nav>
                         <ul>
-                            <li onclick="Startseite()">Startseite</li>
-                            <li onclick="Über_mich()">Über mich</li>
-                            <li onclick="Kontakt()">Kontakt</li>
+                            <li onclick="home()">Startseite</li>
+                            <li onclick="aboutMe()">Über mich</li>
+                            <li onclick="contact()">Kontakt</li>
                         </ul>
                     </nav>
                 </div>
@@ -37,18 +40,19 @@
                     <h3>ALBUMS</h3>
                     <nav>
                         <ul>
-                            <li onclick="Natur()">Natur</li>
-                            <li onclick="Tiere()">Tiere</li>
-                            <li onclick="Stadt_Straße()">Stadt & Straße</li>
-                            <li onclick="Anlaesse()">Anlässe</li>
-                            <li onclick="Familie_Freunde()">Familie & Freunde</li>
-                            <li onclick="Schwarz_Weiss()">Schwarz Weiß</li>
+                            <li onclick="nature()">Natur</li>
+                            <li onclick="animals()">Tiere</li>
+                            <li onclick="cityStreet()">Stadt & Straße</li>
+                            <li onclick="occasions()">Anlässe</li>
+                            <li onclick="familyFriends()">Familie & Freunde</li>
+                            <li onclick="blackWhite()">Schwarz Weiß</li>
                         </ul>
                     </nav>
                 </div>
                 <div class="line"></div>
                 <div class="social_media">
-                    <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.svg"
+                            alt="facebook"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.svg"
                             alt="instagram"></a>
                     <a href="https://x.com/" target="_blank"><img src="./img/x-twitter.svg" alt="x-twitter"></a>
@@ -57,8 +61,8 @@
                 </div>
                 <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
                 <div class="impressum_datenschutz">
-                    <a onclick="impressum()">Impressum</a>
-                    <a onclick="datenschutz()">Datenschutz</a>
+                    <a onclick="imprint()">Impressum</a>
+                    <a onclick="privacy()">Datenschutz</a>
                 </div>
             </div>
 
@@ -70,7 +74,7 @@
                         <h4 class="hide475">Momente vergehen Bilder bleiben!</h4>
                     </div>
                 </div>
-                <div onclick="Main_menu()" class="Main_menu">
+                <div onclick="mainMenu()" class="Main_menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -78,25 +82,25 @@
                 <div id="mob_menu" class="mob_menu hide475">
                     <nav>
                         <ul>
-                            <li class="li_mob" onclick="Startseite()">STARTSEITE</li>
-                            <li class="li_mob" onclick="Über_mich()">ÜBER MICH</li>
-                            <li class="li_mob" onclick="Kontakt()">KONTAKT</li>
-                            <li class="li_mob" onclick="Tablet_menu()">ALBUMS
+                            <li class="li_mob" onclick="home()">STARTSEITE</li>
+                            <li class="li_mob" onclick="aboutMe()">ÜBER MICH</li>
+                            <li class="li_mob" onclick="contact()">KONTAKT</li>
+                            <li class="li_mob" onclick="tabletMenu()">ALBUMS
                                 <img class="arro" src="./img/white-arro.png">
                             </li>
                         </ul>
                     </nav>
                 </div>
 
-                <div id="Tablet_menu" class="Tablet_menu desk_none mob_none">
+                <div id="tablet_menu" class="tablet_menu desk_none mob_none">
                     <nav>
                         <ul>
-                            <li onclick="Natur()">Natur</li>
-                            <li onclick="Tiere()">Tiere</li>
-                            <li onclick="Stadt_Straße()">Stadt & Straße</li>
-                            <li onclick="Anlaesse()">Anlässe</li>
-                            <li onclick="Familie_Freunde()">Familie & Freunde</li>
-                            <li onclick="Schwarz_Weiss()">Schwarz Weiß</li>
+                            <li onclick="nature()">Natur</li>
+                            <li onclick="animals()">Tiere</li>
+                            <li onclick="cityStreet()">Stadt & Straße</li>
+                            <li onclick="occasions()">Anlässe</li>
+                            <li onclick="familyFriends()">Familie & Freunde</li>
+                            <li onclick="blackWhite()">Schwarz Weiß</li>
                         </ul>
                     </nav>
                 </div>
@@ -109,74 +113,67 @@
 
             <section id="main_section" class="main_section"></section>
 
-            <div id="bild_click" class="bild_click hide"></div>
-
-            <section id="Startseite" class="display_none">
+            <section id="home" class="display_none">
                 <div>
-                    <img onclick="Natur()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur"
-                        style="width: 200px; height: 100px;" />
-                    <h6 onclick="Natur()">Natur</h6>
+                    <img onclick="nature()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
+                    <h6 onclick="nature()">Natur</h6>
                 </div>
                 <div>
-                    <img onclick="Tiere()" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg" alt="Tiere"
-                        style="width: 200px; height: 100px;" />
-                    <h6 onclick="Tiere()">Tiere</h6>
+                    <img onclick="animals()" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg" alt="Tiere" />
+                    <h6 onclick="animals()">Tiere</h6>
                 </div>
                 <div>
-                    <img onclick="Stadt_Straße()" class="menu" src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg"
-                        alt="Stadt & Straße" style="width: 200px; height: 100px;" />
-                    <h6 onclick="Stadt_Straße()">Stadt & Straße</h6>
+                    <img onclick="cityStreet()" class="menu"
+                        src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
+                    <h6 onclick="cityStreet()">Stadt & Straße</h6>
                 </div>
                 <div>
-                    <img onclick="Anlaesse()" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg"
-                        alt="Anlässe" style="width: 200px; height: 100px;" />
-                    <h6 onclick="Anlaesse()">Anlässe</h6>
+                    <img onclick="occasions()" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg" />
+                    <h6 onclick="occasions()">Anlässe</h6>
                 </div>
                 <div>
-                    <img onclick="Familie_Freunde()" class="menu"
-                        src="./img/fotos/Familie_Freunde/family-6398107_1280.jpg" alt="Familie & Freunde"
-                        style="width: 200px; height: 100px;" />
-                    <h6 onclick="Familie_Freunde()">Familie & Freunde</h6>
+                    <img onclick="familyFriends()" class="menu"
+                        src="./img/fotos/Familie_Freunde/family-6398107_1280.jpg" alt="Familie & Freunde" />
+                    <h6 onclick="familyFriends()">Familie & Freunde</h6>
                 </div>
                 <div>
-                    <img onclick="Schwarz_Weiss()" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg"
-                        alt="Schwarz Weiß" style="width: 200px; height: 100px;" />
-                    <h6 onclick="Schwarz_Weiss()">Schwarz Weiß</h6>
+                    <img onclick="blackWhite()" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg" />
+                    <h6 onclick="blackWhite()">Schwarz Weiß</h6>
                 </div>
             </section>
 
-            <section id="Über_mich" class="Über_mich display_none">
-                    <h2>Über mich:</h2>
+            <section id="aboutMe" class="aboutMe display_none">
+                <h2>Über mich:</h2>
 
-                    <p>
-                        Hallo! Ich bin <strong>Younes Darabi</strong>, leidenschaftlicher Fotograf mit Blick fürs
-                        Unsichtbare.
-                        Meine Reise in die Welt der Fotografie begann mit einer alten analogen Kamera – und der
-                        Neugier,
-                        Geschichten durch Bilder zu erzählen.
-                    </p><br>
+                <p>
+                    Hallo! Ich bin <strong>Younes Darabi</strong>, leidenschaftlicher Fotograf mit Blick fürs
+                    Unsichtbare.
+                    Meine Reise in die Welt der Fotografie begann mit einer alten analogen Kamera – und der
+                    Neugier,
+                    Geschichten durch Bilder zu erzählen.
+                </p><br>
 
-                    <p>
-                        Ich liebe es, echte Momente einzufangen – ob auf der Straße, in der Natur oder in den Augen
-                        eines Menschen. Mein Stil bewegt sich zwischen Minimalismus, dokumentarischer Ehrlichkeit
-                        und
-                        kreativer Freiheit.
-                    </p><br>
+                <p>
+                    Ich liebe es, echte Momente einzufangen – ob auf der Straße, in der Natur oder in den Augen
+                    eines Menschen. Mein Stil bewegt sich zwischen Minimalismus, dokumentarischer Ehrlichkeit
+                    und
+                    kreativer Freiheit.
+                </p><br>
 
-                    <p>
-                        Fotogram ist mein persönlicher Raum zum Teilen, Erkunden und Experimentieren. Jedes Bild auf
-                        dieser Seite erzählt ein Stück von mir – und vielleicht auch von dir.
-                    </p><br>
+                <p>
+                    Fotogram ist mein persönlicher Raum zum Teilen, Erkunden und Experimentieren. Jedes Bild auf
+                    dieser Seite erzählt ein Stück von mir – und vielleicht auch von dir.
+                </p><br>
 
-                    <p>
-                        Danke, dass du hier bist. Wenn du Fragen hast oder einfach nur „Hi“ sagen willst, schreib
-                        mir
-                        gerne über das <a onclick="
-                            Kontakt()">Kontaktformular</a>.
-                    </p>
+                <p>
+                    Danke, dass du hier bist. Wenn du Fragen hast oder einfach nur „Hi“ sagen willst, schreib
+                    mir
+                    gerne über das <a onclick="
+                            contact()">Kontaktformular</a>.
+                </p>
             </section>
 
-            <section id="Kontakt" class="display_none">
+            <section id="contact" class="display_none">
                 <form>
                     <h2>Kontaktieren Sie uns</h2>
 
@@ -201,7 +198,7 @@
                 </p>
             </section>
 
-            <section id="impressum" class="display_none">
+            <section id="imprint" class="display_none">
                 <h1>Impressum:</h1>
 
                 <h2>Angaben gemäß § 5 TMG</h2>
@@ -239,7 +236,7 @@
                 </p>
             </section>
 
-            <section id="datenschutz" class="display_none">
+            <section id="privacy" class="display_none">
                 <h1>Datenschutzerklärung:</h1>
 
                 <p>
@@ -300,8 +297,8 @@
             </div>
             <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
             <div class="impressum_datenschutz">
-                <a onclick="impressum()">Impressum</a>
-                <a onclick="datenschutz()">Datenschutz</a>
+                <a onclick="imprint()">Impressum</a>
+                <a onclick="privacy()">Datenschutz</a>
             </div>
         </footer>
 

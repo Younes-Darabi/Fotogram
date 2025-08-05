@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Roboto";
-    src: url('./font/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('../font/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
     font-style: normal;
     font-weight: 100 900;
     font-stretch: 75% 100%;
@@ -22,6 +22,7 @@ body {
     background-image: url("../img/backg.jpg");
     background-size: cover;
     background-position: bottom;
+    /* max-width: 1920px; */
 }
 
 p {
@@ -72,7 +73,7 @@ button {
     border: 1px solid #abb7be00;
 }
 
-.div_class {
+.main_div {
 
     display: flex;
     align-items: center;
@@ -197,7 +198,6 @@ a {
 
 /* ----------------------------------main */
 .main_class {
-    position: relative;
     width: 100%;
     background-color: white;
     padding: 20px;
@@ -205,7 +205,6 @@ a {
     color: #282633;
     height: 84vh;
     overflow-y: auto;
-    overflow-x: hidden;
     gap: 20px;
 }
 
@@ -227,31 +226,28 @@ a {
 }
 
 /* ---------------------------------- */
-
-.bild_click {
-    z-index: 5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    color: #000;
-}
-
-
 .hide {
     display: none;
 }
 
+.click_photo {
+    z-index: 5;
+    position: fixed;
+    width: 590px;
+    height: 750px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f3f3;
+    border: 2px solid #cfcdcd45;
+    border-radius: 10px;
+}
+
 /* ---------------------------------- */
 .dialog_img {
-    width: 90%;
-    height: 70vh;
+    width: 500px;
+    height: 600px;
     object-position: center;
     border-radius: 10px;
     border: 3px solid #1f435b23;
@@ -262,8 +258,6 @@ a {
 
 .dialog_img:hover {
     border: 3px solid #EA5A5A;
-    ;
-    ;
 }
 
 .dialog {
@@ -285,7 +279,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .dialog_footer {
@@ -324,7 +317,7 @@ a {
 }
 
 
-/* --------------------kontakt-------------------- */
+/* --------------------contact-------------------- */
 
 form {
     display: flex;
@@ -389,16 +382,8 @@ textarea {
 }
 
 /* ------------Startseite------------- */
-
-.startseite {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 .menu {
+    margin-top: 10px;
     font-weight: bold;
     flex-direction: column;
     justify-content: center;
@@ -407,7 +392,7 @@ textarea {
     color: #1f1d28;
     width: 200px;
     height: 100px;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: all 700ms linear;
     object-fit: cover;
     cursor: pointer;
@@ -453,26 +438,11 @@ h6:hover {
 
 @media(max-width:962px) {
     
-    /* .bild_click {
-        z-index: 5;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(255, 255, 255);
-        color: #000;
-    }  */
-
     .mob_none {
         display: none;
     }
 
-    .div_class {
+    .main_div {
         flex-direction: column;
         align-items: normal;
         justify-content: normal;
@@ -526,7 +496,7 @@ h6:hover {
 
     /* -----------------Tablet Menü------------- */
 
-    .Tablet_menu {
+    .tablet_menu {
         position: absolute;
         right: 2.6%;
         top: 218px;
@@ -535,11 +505,11 @@ h6:hover {
         border-radius: 5px;
     }
 
-    .Tablet_menu nav {
+    .tablet_menu nav {
         margin: 0 30px;
     }
 
-    .Tablet_menu li {
+    .tablet_menu li {
         padding: 5px 10px;
         transition: all 500ms ease-in-out;
         border: 1px solid #15141b6f;
@@ -548,7 +518,7 @@ h6:hover {
         font-size: 14px;
     }
 
-    .Tablet_menu ul {
+    .tablet_menu ul {
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -557,14 +527,14 @@ h6:hover {
         text-align: center;
     }
 
-    .Tablet_menu li:hover {
+    .tablet_menu li:hover {
         position: relative;
         background-color: #1a1922;
         cursor: pointer;
         border: 1px solid #ea5a5a2a;
     }
 
-    .Tablet_menu li:hover::before {
+    .tablet_menu li:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -702,7 +672,7 @@ h6:hover {
     }
 
     /* ------------------------- */
-    .Tablet_menu {
+    .tablet_menu {
         position: absolute;
         right: 2.8%;
         top: 344px;
@@ -711,11 +681,11 @@ h6:hover {
         border-radius: 5px;
     }
 
-    .Tablet_menu nav {
+    .tablet_menu nav {
         margin: 0 30px;
     }
 
-    .Tablet_menu li {
+    .tablet_menu li {
         padding: 5px 10px;
         transition: all 500ms ease-in-out;
         border: 1px solid #15141b6f;
@@ -724,7 +694,7 @@ h6:hover {
         font-size: 14px;
     }
 
-    .Tablet_menu ul {
+    .tablet_menu ul {
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -733,14 +703,14 @@ h6:hover {
         text-align: center;
     }
 
-    .Tablet_menu li:hover {
+    .tablet_menu li:hover {
         position: relative;
         background-color: #1a1922;
         cursor: pointer;
         border: 1px solid #ea5a5a2a;
     }
 
-    .Tablet_menu li:hover::before {
+    .tablet_menu li:hover::before {
         content: "";
         position: absolute;
         left: 0;
