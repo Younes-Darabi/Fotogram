@@ -1,6 +1,8 @@
 let currentArray = null;
 let currentIndex = null;
 let currentArrayLength = null;
+let renderName = null;
+let renderTitle = null;
 
 let occasionalPhotos = [
   { src: "./img/fotos/Anlaesse/birth-5407332_1280.jpg", alt: "birth" },
@@ -108,46 +110,56 @@ let SumArrays = [
   animalsPhotos,
 ];
 
-function nature(){renderCategory(naturePhotos,"Natur:");};
-function animals(){renderCategory(animalsPhotos,"Tiere:");};
-function cityStreet(){renderCategory(cityStreetPhotos,"Stadt & Straße:");};
-function occasions(){renderCategory(occasionalPhotos,"Anlässe:");};
-function familyFriends(){renderCategory(familyFriendsPhotos,"Familie & Freunde:");};
-function blackWhite(){renderCategory(blackWhitePhotos, "Schwarz Weiß:");};
-
-function renderCategory(array, headline) {
+function nature() {
+  renderCategory(naturePhotos);
+}
+function animals() {
+  renderCategory(animalsPhotos);
+}
+function cityStreet() {
+  renderCategory(cityStreetPhotos);
+}
+function occasions() {
+  renderCategory(occasionalPhotos);
+}
+function familyFriends() {
+  renderCategory(familyFriendsPhotos);
+}
+function blackWhite() {
+  renderCategory(blackWhitePhotos);
+}
+function renderCategory(array) {
   document.getElementById("tablet_menu").classList.add("mob_none");
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = `<h2>${headline}</h2>`;
+  output.innerHTML = "";
   array.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
 
 function home() {
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  let home = document.getElementById("home");
-  output.innerHTML = home.innerHTML;
+  renderMain(home, "home");
 }
-
 function renderAboutMe() {
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  let aboutMe = document.getElementById("aboutMe");
-  output.innerHTML = aboutMe.innerHTML;
+  renderMain(aboutMe, "aboutMe");
 }
-
 function renderContact() {
+  renderMain(contact, "contact");
+}
+function renderImprint() {
+  renderMain(imprint, "imprint");
+}
+function renderPrivacy() {
+  renderMain(privacy, "privacy");
+}
+function renderMain(renderName, renderTitle) {
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
-  let output = document.getElementById("main_section");
-  let contact = document.getElementById("contact");
-  output.innerHTML = contact.innerHTML;
+  output = document.getElementById("main_section");
+  renderName = document.getElementById(renderTitle);
+  output.innerHTML = renderName.innerHTML;
 }
 
 function email_senden() {
@@ -156,19 +168,6 @@ function email_senden() {
   output.innerHTML = email_senden.innerHTML;
 }
 
-function renderImprint() {
-  btnClose();
-  let output = document.getElementById("main_section");
-  let imprint = document.getElementById("imprint");
-  output.innerHTML = imprint.innerHTML;
-}
-
-function renderPrivacy() {
-  btnClose();
-  let output = document.getElementById("main_section");
-  let privacy = document.getElementById("privacy");
-  output.innerHTML = privacy.innerHTML;
-}
 function mainMenu() {
   document.getElementById("mob_menu").classList.toggle("hide475");
   document.getElementById("tablet_menu").classList.add("mob_none");
@@ -232,7 +231,7 @@ function getHTMLForImageDisplayDialog(
   currentIndex
 ) {
   return `
-    <div class="dialog">   
+  <div class="dialog">   
 
     <header class="dialog_header">
         <h5>${currentItem.alt}</h5>

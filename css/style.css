@@ -80,7 +80,6 @@ button {
     justify-content: center;
     width: 90%;
     min-height: 100vh;
-
 }
 
 a {
@@ -198,6 +197,9 @@ a {
 
 /* ----------------------------------main */
 .main_class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: white;
     padding: 20px;
@@ -216,7 +218,6 @@ a {
     margin: 10px;
     transition: scale 1s ease;
     border: 1px solid #28263365;
-
 }
 
 .main_img:hover {
@@ -226,6 +227,21 @@ a {
 }
 
 /* ---------------------------------- */
+.max_width_600 {
+    max-width: 600px;
+}
+
+.max_width_800 {
+    max-width: 800px;
+}
+
+.main_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .hide {
     display: none;
 }
@@ -274,7 +290,6 @@ a {
 .dialog {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -283,7 +298,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    padding: 15px 0;
 }
 
 .dialog_main {
@@ -297,7 +312,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    padding: 15px 0;
 }
 
 .dialog_icon {
@@ -329,6 +344,13 @@ a {
 
 
 /* --------------------contact-------------------- */
+
+
+.contact_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 form {
     display: flex;
@@ -393,17 +415,19 @@ textarea {
 }
 
 /* ------------home------------- */
-.home{
+.home {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
 }
-.home_menu{
+
+.home_menu {
     background-color: #efefef;
-    border-radius:10px;
+    border-radius: 10px;
     transition: all 500ms ease-in-out;
 }
+
 .home_menu:hover {
     box-shadow: 0px 0px 1px 1px #ea5a5a86;
     transform: translatey(-5px);
@@ -451,8 +475,9 @@ h6 {
 @media(max-width:962px) {
 
     .main_class {
-    overflow-y: unset;
-    height: auto;
+        overflow-y: unset;
+        height: auto;
+        flex: 1;
     }
 
     .mob_none {
@@ -614,6 +639,7 @@ h6 {
         cursor: pointer;
     }
 }
+
 @media(max-width:860px) {
 
     .open_photo {
@@ -623,7 +649,7 @@ h6 {
 
     .dialog_img {
         max-width: 95%;
-        max-height: 65vh;
+        max-height: 60vh;
         object-fit: contain;
     }
 }
@@ -748,5 +774,12 @@ h6 {
         height: 100%;
         background-color: #EA5A5A;
         border-radius: 2px;
+    }
+}
+
+@media(max-width:475px) {
+    .main_img {
+        width: 130px;
+        height: 130px;
     }
 }
