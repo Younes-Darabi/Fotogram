@@ -7,7 +7,6 @@
     font-display: swap;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -37,7 +36,6 @@ span {
 h1 {
     font-size: 30px;
     margin: 0;
-    color: #d0cfcf;
 }
 
 h2 {
@@ -63,8 +61,6 @@ h5 {
     color: #1F435B;
 }
 
-
-
 button {
     background-color: lightgrey;
     color: rgb(124, 124, 124);
@@ -87,8 +83,6 @@ a {
     color: black;
     cursor: pointer;
 }
-
-/* ----------------------------------header */
 
 .header_main {
     display: flex;
@@ -195,7 +189,6 @@ a {
     cursor: pointer;
 }
 
-/* ----------------------------------main */
 .main_class {
     display: flex;
     justify-content: center;
@@ -226,7 +219,6 @@ a {
     cursor: pointer;
 }
 
-/* ---------------------------------- */
 .max_width_600 {
     max-width: 600px;
 }
@@ -277,7 +269,6 @@ a {
     border-radius: 10px;
 }
 
-/* ---------------------------------- */
 .dialog_img {
     width: 750px;
     height: 65vh;
@@ -342,10 +333,6 @@ a {
     filter: invert(20%) sepia(25%) saturate(1300%) hue-rotate(170deg) brightness(90%) contrast(90%);
 }
 
-
-/* --------------------contact-------------------- */
-
-
 .contact_div {
     display: flex;
     justify-content: center;
@@ -355,12 +342,9 @@ a {
 form {
     display: flex;
     flex-direction: column;
-    /* background-color: #f0f0f1ab; */
-    /* border-radius: 10px; */
     padding: 10px;
     width: 400px;
     gap: 20px;
-    /* border: 1px solid #1f1d2827; */
 }
 
 textarea {
@@ -414,7 +398,6 @@ textarea {
     scale: 1.01;
 }
 
-/* ------------home------------- */
 .home {
     display: flex;
     justify-content: center;
@@ -465,7 +448,6 @@ h6 {
     max-width: 300px;
 }
 
-/* ----------------Respansiv--------------- */
 @media(min-width:963px) {
     .desk_none {
         display: none;
@@ -521,7 +503,6 @@ h6 {
         margin: 0;
     }
 
-    /* ------------------ */
     .footer {
         padding: 20px 0;
         display: flex;
@@ -535,8 +516,6 @@ h6 {
     .main_class {
         border-radius: 0;
     }
-
-    /* -----------------Tablet Menü------------- */
 
     .tablet_menu {
         position: absolute;
@@ -587,7 +566,6 @@ h6 {
         border-radius: 2px;
     }
 
-    /* -----------------Menü------------- */
     .header_mob nav {
         margin-right: 30px;
     }
@@ -670,12 +648,9 @@ h6 {
     form {
         display: flex;
         flex-direction: column;
-        /* background-color: #f0f0f1ab; */
-        /* border-radius: 10px; */
         padding: 10px;
         width: 100%;
         gap: 20px;
-        /* border: 1px solid #1f1d2827; */
     }
 
     .hide475 {
@@ -726,7 +701,6 @@ h6 {
         border-radius: 1px solid #1a1922;
     }
 
-    /* ------------------------- */
     .tablet_menu {
         position: absolute;
         right: 2.8%;
