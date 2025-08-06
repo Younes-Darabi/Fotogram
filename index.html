@@ -11,21 +11,21 @@
     <title>Fotogram</title>
 </head>
 
-<body onload="home()">
+<body onload="renderMain(home, 'home')">
     <div class="main_div">
 
         <section id="photo_viewer" class="photo_viewer hide">
-            <div onclick="logUp()" id="click_photo" class="click_photo">
-                <div onclick="logDown(event)" id="open_photo" class="open_photo"></div>
+            <div onclick="btnCloseDialog()" id="click_photo" class="click_photo">
+                <div onclick="event.stopPropagation()" id="open_photo" class="open_photo"></div>
             </div>
         </section>
 
         <header>
             <div class="header_main mob_none">
                 <div class="title">
-                    <img class="logo" src="./img/favicon.png" alt="Fotogram Logo">
-                    <h1>Fotogram</h1>
-                    <h4>Momente vergehen Bilder bleiben!</h4>
+                    <a href="index.html"><img class="logo" src="./img/favicon.png" alt="Fotogram Logo"></a>
+                    <a href="index.html"><h1>Fotogram</h1></a>
+                    <a href="index.html"><h4>Momente vergehen Bilder bleiben!</h4></a>
                 </div>
                 <div class="line"></div>
 
@@ -33,9 +33,9 @@
                     <h3>MENÜ</h3>
                     <nav>
                         <ul>
-                            <li onclick="home()">Startseite</li>
-                            <li onclick="renderAboutMe()">Über mich</li>
-                            <li onclick="renderContact()">Kontakt</li>
+                            <li class="li_mob" onclick="renderMain(home, 'home')">STARTSEITE</li>
+                            <li class="li_mob" onclick="renderMain(aboutMe, 'aboutMe')">ÜBER MICH</li>
+                            <li class="li_mob" onclick="renderMain(contact, 'contact')">KONTAKT</li>
                         </ul>
                     </nav>
                 </div>
@@ -44,12 +44,12 @@
                     <h3>ALBUMS</h3>
                     <nav>
                         <ul>
-                            <li onclick="nature()">Natur</li>
-                            <li onclick="animals()">Tiere</li>
-                            <li onclick="cityStreet()">Stadt & Straße</li>
-                            <li onclick="occasions()">Anlässe</li>
-                            <li onclick="familyFriends()">Familie & Freunde</li>
-                            <li onclick="blackWhite()">Schwarz Weiß</li>
+                            <li onclick="renderCategory(naturePhotos)">Natur</li>
+                            <li onclick="renderCategory(animalsPhotos)">Tiere</li>
+                            <li onclick="renderCategory(cityStreetPhotos)">Stadt & Straße</li>
+                            <li onclick="renderCategory(occasionalPhotos)">Anlässe</li>
+                            <li onclick="renderCategory(familyFriendsPhotos)">Familie & Freunde</li>
+                            <li onclick="renderCategory(blackWhitePhotos)">Schwarz Weiß</li>
                         </ul>
                     </nav>
                 </div>
@@ -65,8 +65,8 @@
                 </div>
                 <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
                 <div class="impressum_datenschutz">
-                    <a onclick="renderImprint()">Impressum</a>
-                    <a onclick="renderPrivacy()">Datenschutz</a>
+                    <a onclick="renderMain(imprint, 'imprint')">Impressum</a>
+                    <a onclick="renderMain(privacy, 'privacy')">Datenschutz</a>
                 </div>
             </div>
 
@@ -86,9 +86,9 @@
                 <div id="mob_menu" class="mob_menu hide475">
                     <nav>
                         <ul>
-                            <li class="li_mob" onclick="home()">STARTSEITE</li>
-                            <li class="li_mob" onclick="renderAboutMe()">ÜBER MICH</li>
-                            <li class="li_mob" onclick="renderContact()">KONTAKT</li>
+                            <li class="li_mob" onclick="renderMain(home, 'home')">STARTSEITE</li>
+                            <li class="li_mob" onclick="renderMain(aboutMe, 'aboutMe')">ÜBER MICH</li>
+                            <li class="li_mob" onclick="renderMain(contact, 'contact')">KONTAKT</li>
                             <li class="li_mob" onclick="tabletMenu()">ALBUMS
                                 <img class="arro" src="./img/white-arro.png">
                             </li>
@@ -99,12 +99,12 @@
                 <div id="tablet_menu" class="tablet_menu desk_none mob_none">
                     <nav>
                         <ul>
-                            <li onclick="nature()">Natur</li>
-                            <li onclick="animals()">Tiere</li>
-                            <li onclick="cityStreet()">Stadt & Straße</li>
-                            <li onclick="occasions()">Anlässe</li>
-                            <li onclick="familyFriends()">Familie & Freunde</li>
-                            <li onclick="blackWhite()">Schwarz Weiß</li>
+                            <li onclick="renderCategory(naturePhotos)">Natur</li>
+                            <li onclick="renderCategory(animalsPhotos)">Tiere</li>
+                            <li onclick="renderCategory(cityStreetPhotos)">Stadt & Straße</li>
+                            <li onclick="renderCategory(occasionalPhotos)">Anlässe</li>
+                            <li onclick="renderCategory(familyFriendsPhotos)">Familie & Freunde</li>
+                            <li onclick="renderCategory(blackWhitePhotos)">Schwarz Weiß</li>
                         </ul>
                     </nav>
                 </div>
@@ -120,31 +120,31 @@
             <section id="home" class="display_none">
                 <div class="max_width_600 home">
                     <div class="home_menu">
-                        <img onclick="nature()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
-                        <h6 onclick="nature()">Natur</h6>
+                        <img onclick="renderCategory(naturePhotos)" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
+                        <h6 onclick="renderCategory(naturePhotos)">Natur</h6>
                     </div>
                     <div class="home_menu">
-                        <img onclick="animals()" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg"
+                        <img onclick="renderCategory(animalsPhotos)" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg"
                             alt="Tiere" />
-                        <h6 onclick="animals()">Tiere</h6>
+                        <h6 onclick="renderCategory(animalsPhotos)">Tiere</h6>
                     </div>
                     <div class="home_menu">
-                        <img onclick="cityStreet()" class="menu"
+                        <img onclick="renderCategory(cityStreetPhotos)" class="menu"
                             src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
-                        <h6 onclick="cityStreet()">Stadt & Straße</h6>
+                        <h6 onclick="renderCategory(cityStreetPhotos)">Stadt & Straße</h6>
                     </div>
                     <div class="home_menu">
-                        <img onclick="occasions()" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg" />
-                        <h6 onclick="occasions()">Anlässe</h6>
+                        <img onclick="renderCategory(occasionalPhotos)" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg" />
+                        <h6 onclick="renderCategory(occasionalPhotos)">Anlässe</h6>
                     </div>
                     <div class="home_menu">
-                        <img onclick="familyFriends()" class="menu"
+                        <img onclick="renderCategory(familyFriendsPhotos)" class="menu"
                             src="./img/fotos/Familie_Freunde/family-6398107_1280.jpg" alt="Familie & Freunde" />
-                        <h6 onclick="familyFriends()">Familie & Freunde</h6>
+                        <h6 onclick="renderCategory(familyFriendsPhotos)">Familie & Freunde</h6>
                     </div>
                     <div class="home_menu">
-                        <img onclick="blackWhite()" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg" />
-                        <h6 onclick="blackWhite()">Schwarz Weiß</h6>
+                        <img onclick="renderCategory(blackWhitePhotos)" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg" />
+                        <h6 onclick="renderCategory(blackWhitePhotos)">Schwarz Weiß</h6>
                     </div>
                 </div>
             </section>
@@ -198,10 +198,10 @@
                         <textarea rows="10" name="message" required></textarea>
                     </label>
                     <div class="div_senden">
-                        <input onclick=email_senden() class="senden" type="submit" value="Nachricht senden" />
+                        <input onclick=emailMessageSent() class="senden" type="submit" value="Nachricht senden" />
                     </div>
                 </form>
-                <p id="email_senden" class="display_none">
+                <p id="email_message_sent" class="display_none">
                     Danke für Ihre Nachricht!<br>
                     Schön, dass Sie uns geschrieben haben. Wir melden uns in Kürze bei Ihnen.
                 </p>
@@ -310,8 +310,8 @@
             </div>
             <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
             <div class="impressum_datenschutz">
-                <a onclick="renderImprint()">Impressum</a>
-                <a onclick="renderPrivacy()">Datenschutz</a>
+                <a onclick="renderMain(imprint, 'imprint')">Impressum</a>
+                <a onclick="renderMain(privacy, 'privacy')">Datenschutz</a>
             </div>
         </footer>
 

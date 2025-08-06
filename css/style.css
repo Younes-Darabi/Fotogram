@@ -22,7 +22,6 @@ body {
     background-image: url("../img/backg.jpg");
     background-size: cover;
     background-position: bottom;
-    max-width: 1920px;
 }
 
 p {
@@ -38,6 +37,7 @@ span {
 h1 {
     font-size: 30px;
     margin: 0;
+    color: #d0cfcf;
 }
 
 h2 {
@@ -74,7 +74,7 @@ button {
 }
 
 .main_div {
-
+    max-width: 1920px;
     display: flex;
     align-items: center;
     justify-content: center;

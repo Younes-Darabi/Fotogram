@@ -110,28 +110,10 @@ let SumArrays = [
   animalsPhotos,
 ];
 
-function nature() {
-  renderCategory(naturePhotos);
-}
-function animals() {
-  renderCategory(animalsPhotos);
-}
-function cityStreet() {
-  renderCategory(cityStreetPhotos);
-}
-function occasions() {
-  renderCategory(occasionalPhotos);
-}
-function familyFriends() {
-  renderCategory(familyFriendsPhotos);
-}
-function blackWhite() {
-  renderCategory(blackWhitePhotos);
-}
 function renderCategory(array) {
   document.getElementById("tablet_menu").classList.add("mob_none");
   document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
+  btnCloseDialog();
   let output = document.getElementById("main_section");
   output.innerHTML = "";
   array.forEach((element) => {
@@ -139,33 +121,19 @@ function renderCategory(array) {
   });
 }
 
-function home() {
-  renderMain(home, "home");
-}
-function renderAboutMe() {
-  renderMain(aboutMe, "aboutMe");
-}
-function renderContact() {
-  renderMain(contact, "contact");
-}
-function renderImprint() {
-  renderMain(imprint, "imprint");
-}
-function renderPrivacy() {
-  renderMain(privacy, "privacy");
-}
+
 function renderMain(renderName, renderTitle) {
   document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
+  btnCloseDialog();
   output = document.getElementById("main_section");
   renderName = document.getElementById(renderTitle);
   output.innerHTML = renderName.innerHTML;
 }
 
-function email_senden() {
+function emailMessageSent() {
   let output = document.getElementById("main_section");
-  let email_senden = document.getElementById("email_senden");
-  output.innerHTML = email_senden.innerHTML;
+  let emailMessage = document.getElementById("email_message_sent");
+  output.innerHTML = emailMessage.innerHTML;
 }
 
 function mainMenu() {
@@ -176,7 +144,7 @@ function tabletMenu() {
   document.getElementById("tablet_menu").classList.toggle("mob_none");
 }
 
-function btnClose() {
+function btnCloseDialog() {
   document.getElementById("photo_viewer").classList.add("hide");
 }
 
@@ -235,7 +203,7 @@ function getHTMLForImageDisplayDialog(
 
     <header class="dialog_header">
         <h5>${currentItem.alt}</h5>
-        <a onclick="btnClose()"><img class="icon_close" src="./img/close.png"></a>
+        <a onclick="btnCloseDialog()"><img class="icon_close" src="./img/close.png"></a>
     </header>
 
     <main class="dialog_main">
@@ -254,11 +222,4 @@ function getHTMLForImageDisplayDialog(
       <a onclick="btnNext()"><img class="dialog_icon" src="./img/next.svg"></a>
     </footer>
   </div>`;
-}
-
-function logUp() {
-  btnClose();
-}
-function logDown(event) {
-  event.stopPropagation();
 }
