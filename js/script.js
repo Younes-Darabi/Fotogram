@@ -99,7 +99,6 @@ let animalsPhotos = [
   { src: "./img/fotos/Tiere/lemon-pancy-9727489_1280.jpg", alt: "lemon pancy" },
   { src: "./img/fotos/Tiere/Sommer4.jpg", alt: "Sommer" },
 ];
-
 let SumArrays = [
   occasionalPhotos,
   familyFriendsPhotos,
@@ -109,63 +108,20 @@ let SumArrays = [
   animalsPhotos,
 ];
 
-function nature() {
+function nature(){renderCategory(naturePhotos,"Natur:");};
+function animals(){renderCategory(animalsPhotos,"Tiere:");};
+function cityStreet(){renderCategory(cityStreetPhotos,"Stadt & Straße:");};
+function occasions(){renderCategory(occasionalPhotos,"Anlässe:");};
+function familyFriends(){renderCategory(familyFriendsPhotos,"Familie & Freunde:");};
+function blackWhite(){renderCategory(blackWhitePhotos, "Schwarz Weiß:");};
+
+function renderCategory(array, headline) {
   document.getElementById("tablet_menu").classList.add("mob_none");
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Natur:</h2>";
-  naturePhotos.forEach((element) => {
-    output.innerHTML += `<img class="main_img" alt="${element.alt}" src="${element.src}" >`;
-  });
-}
-function animals() {
-  document.getElementById("tablet_menu").classList.add("mob_none");
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Tiere:</h2>";
-  animalsPhotos.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
-  });
-}
-function cityStreet() {
-  document.getElementById("tablet_menu").classList.add("mob_none");
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Stadt & Straße:</h2>";
-  cityStreetPhotos.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
-  });
-}
-function occasions() {
-  document.getElementById("tablet_menu").classList.add("mob_none");
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Anlässe:</h2>";
-  occasionalPhotos.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
-  });
-}
-function familyFriends() {
-  document.getElementById("tablet_menu").classList.add("mob_none");
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Familie & Freunde:</h2>";
-  familyFriendsPhotos.forEach((element) => {
-    output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
-  });
-}
-function blackWhite() {
-  document.getElementById("tablet_menu").classList.add("mob_none");
-  document.getElementById("mob_menu").classList.add("hide475");
-  btnClose();
-  let output = document.getElementById("main_section");
-  output.innerHTML = "<h2>Schwarz Weiß:</h2>";
-  blackWhitePhotos.forEach((element) => {
+  output.innerHTML = `<h2>${headline}</h2>`;
+  array.forEach((element) => {
     output.innerHTML += `<img class="main_img"  alt="${element.alt}" src="${element.src}">`;
   });
 }
@@ -178,7 +134,7 @@ function home() {
   output.innerHTML = home.innerHTML;
 }
 
-function aboutMe() {
+function renderAboutMe() {
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
@@ -186,7 +142,7 @@ function aboutMe() {
   output.innerHTML = aboutMe.innerHTML;
 }
 
-function contact() {
+function renderContact() {
   document.getElementById("mob_menu").classList.add("hide475");
   btnClose();
   let output = document.getElementById("main_section");
@@ -200,14 +156,14 @@ function email_senden() {
   output.innerHTML = email_senden.innerHTML;
 }
 
-function imprint() {
+function renderImprint() {
   btnClose();
   let output = document.getElementById("main_section");
   let imprint = document.getElementById("imprint");
   output.innerHTML = imprint.innerHTML;
 }
 
-function privacy() {
+function renderPrivacy() {
   btnClose();
   let output = document.getElementById("main_section");
   let privacy = document.getElementById("privacy");
@@ -239,19 +195,14 @@ function btnPrevious() {
   }
 }
 
-
-
-
-
-
 document.getElementById("main_section").addEventListener("click", function (e) {
   if (e.target && e.target.classList.contains("main_img")) {
     clickedSrc = e.target.getAttribute("src");
-    dialog(e);
+    infoFordialog(e);
   }
 });
 
-function dialog(e) {
+function infoFordialog(e) {
   clickedSrc = e.target.getAttribute("src");
 
   SumArrays.forEach((onearray) => {
@@ -271,12 +222,16 @@ function updateDialog() {
   currentArrayLength = currentArray.length;
   document.getElementById("photo_viewer").classList.remove("hide");
 
-  
-  document.getElementById("open_photo").innerHTML = ImageDisplayDialog(currentItem,currentArrayLength,currentIndex);
+  document.getElementById("open_photo").innerHTML =
+    getHTMLForImageDisplayDialog(currentItem, currentArrayLength, currentIndex);
 }
 
-function ImageDisplayDialog(currentItem,currentArrayLength,currentIndex){
-  return`
+function getHTMLForImageDisplayDialog(
+  currentItem,
+  currentArrayLength,
+  currentIndex
+) {
+  return `
     <div class="dialog">   
 
     <header class="dialog_header">
@@ -302,9 +257,9 @@ function ImageDisplayDialog(currentItem,currentArrayLength,currentIndex){
   </div>`;
 }
 
-function logUp(){
+function logUp() {
   btnClose();
 }
-function logDown(event){
+function logDown(event) {
   event.stopPropagation();
 }

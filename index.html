@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -34,8 +34,8 @@
                     <nav>
                         <ul>
                             <li onclick="home()">Startseite</li>
-                            <li onclick="aboutMe()">Über mich</li>
-                            <li onclick="contact()">Kontakt</li>
+                            <li onclick="renderAboutMe()">Über mich</li>
+                            <li onclick="renderContact()">Kontakt</li>
                         </ul>
                     </nav>
                 </div>
@@ -65,8 +65,8 @@
                 </div>
                 <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
                 <div class="impressum_datenschutz">
-                    <a onclick="imprint()">Impressum</a>
-                    <a onclick="privacy()">Datenschutz</a>
+                    <a onclick="renderImprint()">Impressum</a>
+                    <a onclick="renderPrivacy()">Datenschutz</a>
                 </div>
             </div>
 
@@ -87,8 +87,8 @@
                     <nav>
                         <ul>
                             <li class="li_mob" onclick="home()">STARTSEITE</li>
-                            <li class="li_mob" onclick="aboutMe()">ÜBER MICH</li>
-                            <li class="li_mob" onclick="contact()">KONTAKT</li>
+                            <li class="li_mob" onclick="renderAboutMe()">ÜBER MICH</li>
+                            <li class="li_mob" onclick="renderContact()">KONTAKT</li>
                             <li class="li_mob" onclick="tabletMenu()">ALBUMS
                                 <img class="arro" src="./img/white-arro.png">
                             </li>
@@ -115,36 +115,43 @@
 
         <main class="main_class">
 
-            <section id="main_section" class="main_section"></section>
+            <section id="main_section"></section>
+
+
             <section id="home" class="display_none">
-                <div>
-                    <img onclick="nature()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
-                    <h6 onclick="nature()">Natur</h6>
-                </div>
-                <div>
-                    <img onclick="animals()" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg" alt="Tiere" />
-                    <h6 onclick="animals()">Tiere</h6>
-                </div>
-                <div>
-                    <img onclick="cityStreet()" class="menu" src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
-                    <h6 onclick="cityStreet()">Stadt & Straße</h6>
-                </div>
-                <div>
-                    <img onclick="occasions()" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg" />
-                    <h6 onclick="occasions()">Anlässe</h6>
-                </div>
-                <div>
-                    <img onclick="familyFriends()" class="menu"
-                        src="./img/fotos/Familie_Freunde/family-6398107_1280.jpg" alt="Familie & Freunde" />
-                    <h6 onclick="familyFriends()">Familie & Freunde</h6>
-                </div>
-                <div>
-                    <img onclick="blackWhite()" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg" />
-                    <h6 onclick="blackWhite()">Schwarz Weiß</h6>
+                <div class="home">
+                    <div class="home_menu">
+                        <img onclick="nature()" class="menu" src="./img/fotos/Natur/Frühling_2025_2.jpg" alt="Natur" />
+                        <h6 onclick="nature()">Natur</h6>
+                    </div>
+                    <div class="home_menu">
+                        <img onclick="animals()" class="menu" src="./img/fotos/Tiere/cat-9734651_1280.jpg"
+                            alt="Tiere" />
+                        <h6 onclick="animals()">Tiere</h6>
+                    </div>
+                    <div class="home_menu">
+                        <img onclick="cityStreet()" class="menu"
+                            src="./img/fotos/Stadt_Strasse/castle-5116436_1280.jpg" />
+                        <h6 onclick="cityStreet()">Stadt & Straße</h6>
+                    </div>
+                    <div class="home_menu">
+                        <img onclick="occasions()" class="menu" src="./img/fotos/Anlaesse/crowd-2140590_1280.jpg" />
+                        <h6 onclick="occasions()">Anlässe</h6>
+                    </div>
+                    <div class="home_menu">
+                        <img onclick="familyFriends()" class="menu"
+                            src="./img/fotos/Familie_Freunde/family-6398107_1280.jpg" alt="Familie & Freunde" />
+                        <h6 onclick="familyFriends()">Familie & Freunde</h6>
+                    </div>
+                    <div class="home_menu">
+                        <img onclick="blackWhite()" class="menu" src="./img/fotos/Schwarz_Weiss/cat-5400886_1280.jpg" />
+                        <h6 onclick="blackWhite()">Schwarz Weiß</h6>
+                    </div>
                 </div>
             </section>
 
-            <section id="aboutMe" class="aboutMe display_none">
+
+            <section id="aboutMe" class="display_none">
                 <h2>Über mich:</h2>
 
                 <p>
@@ -299,8 +306,8 @@
             </div>
             <span>&copy; 2025 Fotogram Alle Rechte vorbehalten.</span>
             <div class="impressum_datenschutz">
-                <a onclick="imprint()">Impressum</a>
-                <a onclick="privacy()">Datenschutz</a>
+                <a onclick="renderImprint()">Impressum</a>
+                <a onclick="renderPrivacy()">Datenschutz</a>
             </div>
         </footer>
 
